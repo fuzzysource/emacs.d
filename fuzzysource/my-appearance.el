@@ -4,6 +4,6 @@
   :defer t
   :init
   (load-theme 'spacemacs-dark t)
-  (spaceline-spacemacs-theme))
+  (spaceline-emacs-theme))
 
 (provide 'my-appearance)
