@@ -5,6 +5,13 @@
   :init
   (global-origami-mode))
 
+(use-package all-the-icons)
+
+(use-package neotree
+  :bind ("<f8>" . neotree-toggle)
+  :config
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
+
 (use-package buffer-move
   :init
   (global-set-key (kbd "<C-S-up>")     'buf-move-up)

@@ -15,6 +15,7 @@
   (add-to-list 'python-shell-extra-pythonpaths (projectile-project-root)))
 
 (defun my/python-mode-startup ()
+  (electric-pair-mode)
   (anaconda-mode)
   (anaconda-eldoc-mode)
   (add-projectile-project-root-to-PYTHONPATH)
