@@ -3,7 +3,13 @@
 
 (use-package origami
   :init
-  (global-origami-mode))
+  (global-origami-mode)
+  (global-set-key (kbd "<M-f3>") 'origami-toggle-node)
+  (global-set-key (kbd "<f3>") 'origami-toggle-all-nodes))
+
+(use-package sr-speedbar
+  :init
+  (global-set-key (kbd "s-s") 'sr-speedbar-toggle))
 
 (use-package all-the-icons)
 
@@ -31,8 +37,16 @@
 (use-package powerline
   :init (powerline-vim-theme))
 
+(use-package multiple-cursors
+  :init
+  (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
 
 (show-paren-mode 1)
+(electric-pair-mode 1)
+
 (setq c-basic-offset 4) ; indents 4 chars
 (setq tab-width 4)          ; and 4 char wide for TAB
 (setq indent-tabs-mode nil) ; And force use of spaces

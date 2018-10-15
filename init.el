@@ -22,8 +22,6 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(add-to-list 'default-frame-alist '(font . "Noto Mono"))
-
 (require 'my-editing-settings)
 (require 'my-global-key-bindings)
 (require 'my-appearance)
@@ -47,7 +45,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" default)))
+    ("e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "3cd28471e80be3bd2657ca3f03fbb2884ab669662271794360866ab60b6cb6e6" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "e9776d12e4ccb722a2a732c6e80423331bcb93f02e089ba2a4b02e85de1cf00e" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" default)))
  '(package-selected-packages
    (quote
     (wanderlust magit neotree dockerfile-mode company-anaconda spacemacs-theme zerodark-theme origami pyvenv realgud company-mode anaconda-mode helm-projectile use-package helm))))
