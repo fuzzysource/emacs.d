@@ -53,4 +53,5 @@
  ;; If there is more than one, they won't work right.
  '(awesome-tab-default ((t (:inherit default :height 1.1))))
  '(awesome-tab-selected ((t (:inherit awesome-tab-default :foreground "orange red" :overline "green3" :weight ultra-bold :width semi-expanded))))
- '(awesome-tab-unselected ((t (:inherit awesome-tab-default :foreground "light gray" :overline "dark green")))))
+ '(awesome-tab-unselected ((t (:inherit awesome-tab-default :foreground "light gray" :overline "dark green"))))
+ '(font-lock-comment-face ((t (:foreground "#65737e" :slant italic)))))
