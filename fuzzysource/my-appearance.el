@@ -19,6 +19,6 @@
 ;; (add-to-list 'default-frame-alist '(font . "Noto Mono"))
 
 
-(load-theme 'granger t)
+(load-theme 'brin t)
 
 (provide 'my-appearance)

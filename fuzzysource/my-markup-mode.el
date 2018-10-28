@@ -15,7 +15,4 @@
   ("<M-right>" . markdown-demote))
 
 (use-package markdown-toc)
-
-(use-package markdown-preview-mode)
-
 (provide 'my-markup-mode)

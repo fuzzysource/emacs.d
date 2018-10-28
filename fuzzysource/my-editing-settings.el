@@ -61,6 +61,4 @@
 (global-set-key (kbd "C-c t g") 'awesome-tab-switch-group)
 (global-set-key (kbd "M-j") 'awesome-tab-backward-tab)
 (global-set-key (kbd "M-k") 'awesome-tab-forward-tab)
-(set-face-attribute 'awesome-tab-default nil
-		            :height 1.1)
 (provide 'my-editing-settings)

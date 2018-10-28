@@ -1,0 +1,1 @@
+(provide 'host-machine-config)
