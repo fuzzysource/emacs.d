@@ -22,7 +22,11 @@
 ;; (set-default-font "Source Code Pro-12" nil t)
 
 (add-to-list 'default-frame-alist
-             '(font . "Space Mono-13"))
-(load-theme 'brin t)
+             '(font . "Dejavu Sans Mono-11"))
+
+(window-divider-mode -1)
+(scroll-bar-mode -1)
+
+(load-theme 'wombat t)
 
 (provide 'my-appearance)
