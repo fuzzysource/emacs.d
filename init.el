@@ -10,16 +10,20 @@
         ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
         ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")))
 
-(add-to-list 'load-path "~/.emacs.d/fuzzysource")
-(add-to-list 'load-path "~/.emacs.d/github")
+(let ((default-directory  "~/.emacs.d/github"))
+  (normal-top-level-add-subdirs-to-load-path))
 
-(require 'use-package)
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (require 'use-package))
 (setq use-package-always-ensure t)
 
+(add-to-list 'load-path "~/.emacs.d/fuzzysource")
 (require 'host-machine-config)
 
 (require 'my-editing-settings)
 (require 'my-global-key-bindings)
+(require 'my-treemacs-mode)
 (require 'my-appearance)
 (require 'my-helm-mode)
 (require 'my-projectile-mode)
@@ -37,6 +41,7 @@
 (require 'my-sidebar-mode)
 
 
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -51,6 +56,37 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#1B2229" "#BF616A" "#A3BE8C" "#ECBE7B" "#8FA1B3" "#c678dd" "#46D9FF" "#DFDFDF"])
+ '(custom-safe-themes
+   (quote
+    ("7e78a1030293619094ea6ae80a7579a562068087080e01c2b8b503b27900165c" "100e7c5956d7bb3fd0eebff57fde6de8f3b9fafa056a2519f169f85199cc1c96" "93a0885d5f46d2aeac12bf6be1754faa7d5e28b27926b8aa812840fe7d0b7983" default)))
+ '(fci-rule-color "#65737E")
+ '(jdee-db-active-breakpoint-face-colors (cons "#1B2229" "#D08770"))
+ '(jdee-db-requested-breakpoint-face-colors (cons "#1B2229" "#A3BE8C"))
+ '(jdee-db-spec-breakpoint-face-colors (cons "#1B2229" "#4f5b66"))
  '(package-selected-packages
    (quote
-    (ibuffer-git yaml-mode web-mode wanderlust use-package tabbar sublime-themes sr-speedbar spacemacs-theme spaceline rust-mode realgud pyvenv paredit origami neotree multiple-cursors meghanada markdown-toc markdown-preview-mode magit imenu-list highlight-indent-guides helm-projectile dockerfile-mode dired-sidebar company-restclient company-quickhelp company-anaconda buffer-move all-the-icons-dired))))
+    (doom-modeline doom-themes groovy-mode ibuffer-git yaml-mode web-mode wanderlust use-package tabbar sublime-themes sr-speedbar spacemacs-theme spaceline rust-mode realgud pyvenv paredit origami neotree multiple-cursors meghanada markdown-toc markdown-preview-mode magit imenu-list highlight-indent-guides helm-projectile dockerfile-mode dired-sidebar company-restclient company-quickhelp company-anaconda buffer-move all-the-icons-dired)))
+ '(vc-annotate-background "#2F3841")
+ '(vc-annotate-color-map
+   (list
+    (cons 20 "#A3BE8C")
+    (cons 40 "#bbbe86")
+    (cons 60 "#d3be80")
+    (cons 80 "#ECBE7B")
+    (cons 100 "#e2ab77")
+    (cons 120 "#d99973")
+    (cons 140 "#D08770")
+    (cons 160 "#cc8294")
+    (cons 180 "#c97db8")
+    (cons 200 "#c678dd")
+    (cons 220 "#c370b6")
+    (cons 240 "#c16890")
+    (cons 260 "#BF616A")
+    (cons 280 "#a35f69")
+    (cons 300 "#875e68")
+    (cons 320 "#6b5c67")
+    (cons 340 "#65737E")
+    (cons 360 "#65737E")))
+ '(vc-annotate-very-old-color nil))

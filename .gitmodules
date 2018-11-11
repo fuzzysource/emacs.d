@@ -1,3 +1,6 @@
 [submodule "github/sidebar.el"]
 	path = github/sidebar.el
 	url = https://github.com/sebastiencs/sidebar.el.git
+[submodule "github/use-package"]
+	path = github/use-package
+	url = https://github.com/jwiegley/use-package.git
