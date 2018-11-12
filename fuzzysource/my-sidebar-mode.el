@@ -12,7 +12,6 @@
   :bind ("<f8>" . neotree-toggle))
 
 (use-package ibuffer-sidebar
-  :load-path "~/.emacs.d/github/ibuffer-sidebar"
   :commands (ibuffer-sidebar-toggle-sidebar)
   :bind ("C-x C-b" . ibuffer-sidebar-toggle-sidebar))
 

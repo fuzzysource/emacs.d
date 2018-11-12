@@ -20,10 +20,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/fuzzysource")
 (require 'host-machine-config)
-
+(require 'my-evil-mode)
 (require 'my-editing-settings)
 (require 'my-global-key-bindings)
-;; (require 'my-treemacs-mode)
 (require 'my-appearance)
 (require 'my-helm-mode)
 (require 'my-sidebar-mode)
