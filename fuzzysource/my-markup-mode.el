@@ -14,5 +14,9 @@
   ("<M-left>" . markdown-promote)
   ("<M-right>" . markdown-demote))
 
+(add-hook 'nxml-mode-hook
+	  (lambda ()
+	    (nxml-child-indent 4) ))
+
 (use-package markdown-toc)
 (provide 'my-markup-mode)

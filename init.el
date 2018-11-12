@@ -23,9 +23,10 @@
 
 (require 'my-editing-settings)
 (require 'my-global-key-bindings)
-(require 'my-treemacs-mode)
+;; (require 'my-treemacs-mode)
 (require 'my-appearance)
 (require 'my-helm-mode)
+(require 'my-sidebar-mode)
 (require 'my-projectile-mode)
 (require 'my-auto-complete)
 (require 'my-python-mode)
@@ -38,8 +39,6 @@
 (require 'my-magit-mode)
 (require 'my-rust-mode)
 (require 'my-java-mode)
-(require 'my-sidebar-mode)
-
 
 
 (custom-set-faces
@@ -65,6 +64,7 @@
  '(jdee-db-active-breakpoint-face-colors (cons "#1B2229" "#D08770"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#1B2229" "#A3BE8C"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#1B2229" "#4f5b66"))
+ '(nxml-child-indent 4)
  '(package-selected-packages
    (quote
     (doom-modeline doom-themes groovy-mode ibuffer-git yaml-mode web-mode wanderlust use-package tabbar sublime-themes sr-speedbar spacemacs-theme spaceline rust-mode realgud pyvenv paredit origami neotree multiple-cursors meghanada markdown-toc markdown-preview-mode magit imenu-list highlight-indent-guides helm-projectile dockerfile-mode dired-sidebar company-restclient company-quickhelp company-anaconda buffer-move all-the-icons-dired)))

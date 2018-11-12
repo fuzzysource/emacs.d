@@ -5,11 +5,11 @@
 (use-package all-the-icons)
 
 (use-package neotree
-  :bind ("<f8>" . neotree-toggle)
   :config
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
   (setq neo-window-fixed-size nil)
-  (setq neo-window-width 35))
+  (setq neo-window-width 35)
+  :bind ("<f8>" . neotree-toggle))
 
 (use-package ibuffer-sidebar
   :load-path "~/.emacs.d/github/ibuffer-sidebar"

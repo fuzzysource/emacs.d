@@ -40,13 +40,5 @@
 
 (use-package paredit)
 
-(use-package awesome-tab
-  :load-path "~/.emacs.d/github/awesome-tab"
-  :init
-  (require 'awesome-tab)
-  (awesome-tab-mode t)
-  :bind (("C-c t g" . awesome-tab-switch-group)
-	 ("M-j" . awesome-tab-backward-tab)
-	 ("M-k" . awesome-tab-forward-tab)))
 
 (provide 'my-editing-settings)
