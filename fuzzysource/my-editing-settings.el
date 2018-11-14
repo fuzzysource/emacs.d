@@ -13,8 +13,8 @@
 (use-package origami
   :init
   (global-origami-mode)
-  (global-set-key (kbd "<M-f3>") 'origami-toggle-node)
-  (global-set-key (kbd "<f3>") 'origami-toggle-all-nodes))
+  (global-set-key (kbd "<f3>") 'origami-toggle-node)
+  (global-set-key (kbd "<M-f3>") 'origami-toggle-all-nodes))
 
 (use-package buffer-move
   :init
