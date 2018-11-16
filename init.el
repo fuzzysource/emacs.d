@@ -20,11 +20,12 @@
 
 (add-to-list 'load-path "~/.emacs.d/fuzzysource")
 (require 'host-machine-config)
+(require 'my-ivy-mode)
 (require 'my-evil-mode)
 (require 'my-editing-settings)
 (require 'my-global-key-bindings)
 (require 'my-appearance)
-(require 'my-helm-mode)
+; (require 'my-helm-mode)
 (require 'my-sidebar-mode)
 (require 'my-projectile-mode)
 (require 'my-auto-complete)
@@ -58,7 +59,7 @@
    ["#1B2229" "#BF616A" "#A3BE8C" "#ECBE7B" "#8FA1B3" "#c678dd" "#46D9FF" "#DFDFDF"])
  '(custom-safe-themes
    (quote
-    ("7e78a1030293619094ea6ae80a7579a562068087080e01c2b8b503b27900165c" "100e7c5956d7bb3fd0eebff57fde6de8f3b9fafa056a2519f169f85199cc1c96" "93a0885d5f46d2aeac12bf6be1754faa7d5e28b27926b8aa812840fe7d0b7983" default)))
+    ("f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "7e78a1030293619094ea6ae80a7579a562068087080e01c2b8b503b27900165c" "100e7c5956d7bb3fd0eebff57fde6de8f3b9fafa056a2519f169f85199cc1c96" "93a0885d5f46d2aeac12bf6be1754faa7d5e28b27926b8aa812840fe7d0b7983" default)))
  '(fci-rule-color "#65737E")
  '(jdee-db-active-breakpoint-face-colors (cons "#1B2229" "#D08770"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#1B2229" "#A3BE8C"))

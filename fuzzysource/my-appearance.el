@@ -42,7 +42,8 @@
 ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
 
-(load-theme 'doom-spacegrey t)
+(load-theme 'doom-dracula t)
+
 
 ;; (add-to-list 'default-frame-alist '(font . "Source Code Pro"))
 ;; (add-to-list 'default-frame-alist '(font . "Noto Mono"))
