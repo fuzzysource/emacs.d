@@ -3,29 +3,23 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
-
-(setq package-archives
-      '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
-        ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
-        ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")))
-
+(add-to-list 'load-path "~/.emacs.d/fuzzysource")
 (let ((default-directory  "~/.emacs.d/github"))
   (normal-top-level-add-subdirs-to-load-path))
 
+(require 'host-machine-config)
+
+(package-initialize)
 (eval-when-compile
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
   (require 'use-package))
 (setq use-package-always-ensure t)
 
-(add-to-list 'load-path "~/.emacs.d/fuzzysource")
-(require 'host-machine-config)
 (require 'my-ivy-mode)
 (require 'my-evil-mode)
 (require 'my-editing-settings)
-(require 'my-global-key-bindings)
 (require 'my-appearance)
-; (require 'my-helm-mode)
+;; (require 'my-helm-mode)
 (require 'my-sidebar-mode)
 (require 'my-projectile-mode)
 (require 'my-auto-complete)
@@ -39,6 +33,8 @@
 (require 'my-magit-mode)
 (require 'my-rust-mode)
 (require 'my-java-mode)
+
+(require 'my-global-key-bindings)
 
 
 (custom-set-faces
