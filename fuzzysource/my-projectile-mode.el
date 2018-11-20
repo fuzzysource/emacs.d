@@ -1,7 +1,6 @@
-(use-package helm-projectile
+(use-package projectile
   :init
   (projectile-global-mode)
-  (helm-projectile-on)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (require 'awesome-tab)
   (awesome-tab-mode t)

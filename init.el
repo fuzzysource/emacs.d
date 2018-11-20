@@ -19,8 +19,8 @@
 (require 'my-evil-mode)
 (require 'my-editing-settings)
 (require 'my-appearance)
-;; (require 'my-helm-mode)
 (require 'my-sidebar-mode)
+(require 'my-browsing-mode)
 (require 'my-projectile-mode)
 (require 'my-auto-complete)
 (require 'my-python-mode)
@@ -33,6 +33,7 @@
 (require 'my-magit-mode)
 (require 'my-rust-mode)
 (require 'my-java-mode)
+
 
 (require 'my-global-key-bindings)
 
