@@ -10,6 +10,9 @@
 
   :bind ("<f9>" . projectile-grep)
   :config
-  (setq projectile-switch-project-action 'neotree-projectile-action))
+  (setq projectile-switch-project-action 'neotree-projectile-action)
+  (add-to-list 'projectile-globally-ignored-files "*.pyc")
+  (add-to-list 'projectile-globally-ignored-directories "__pycache__")
+  (add-to-list 'projectile-globally-ignored-directories ".tox" ))
 
 (provide 'my-projectile-mode)

@@ -28,8 +28,8 @@
   (setq highlight-indent-guides-method 'character)
   (setq highlight-indent-guides-character ?\|))
 
-(use-package powerline
-  :init (powerline-vim-theme))
+;; (use-package powerline
+  ;; :init (powerline-vim-theme))
 
 (use-package multiple-cursors
   :init
