@@ -3,14 +3,16 @@
   (global-company-mode)
   :config
   (setq company-idle-delay 0.5)
-  (setq company-tooltip-limit 10)
+  (setq company-tooltip-limit 7)
   (setq company-minimum-prefix-length 2)
-  (setq company-tooltip-flip-when-above t))
+  (setq company-tooltip-flip-when-above nil))
 
 (use-package company-quickhelp
   :init
-  (company-quickhelp-mode)
-  (eval-after-load 'company
-    '(define-key company-active-map (kbd "C-c h") #'company-quickhelp-manual-begin)))
+  (company-quickhelp-mode)) 
+
+;; (use-package auto-complete
+;;   :init
+;;   (ac-config-default))
 
 (provide 'my-auto-complete)

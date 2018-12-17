@@ -3,4 +3,4 @@
   (progn
     (highlight-changes-mode)))
 
-(provide 'my-data-language-mode)
+(provide 'my-yaml-mode)
