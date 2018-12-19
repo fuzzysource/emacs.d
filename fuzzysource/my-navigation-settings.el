@@ -34,6 +34,7 @@
   :init
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers t)
-  (setq ivy-count-format "(%d/%d) "))
+  (setq ivy-count-format "(%d/%d) ")
+  (setq ivy-use-selectable-prompt t))
 
 (provide 'my-navigation-settings)

@@ -6,7 +6,7 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (add-to-list 'default-frame-alist
-             '(font . "Dejavu Sans Mono-11"))
+             '(font . "Monaco-13"))
 
 ;; Modeline config starts from here
 (use-package spaceline)

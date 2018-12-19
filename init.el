@@ -43,6 +43,9 @@
 (require 'my-docker-mode)
 (require 'my-python-mode)
 
+;; Tools
+(require 'my-toolings)
+
 (require 'my-keybindings)
 
 (setq custom-file "~/.emacs-custom.el")
