@@ -9,7 +9,6 @@
 (add-to-list 'load-path "~/.emacs.d/fuzzysource")
 (require 'host-machine-config)
 
-(package-initialize)
 (eval-when-compile
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
   (require 'use-package))

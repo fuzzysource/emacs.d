@@ -15,4 +15,4 @@
     (delete-region start end)
     (insert text)))
 
-(provide 'my-tooling)
+(provide 'my-toolings)

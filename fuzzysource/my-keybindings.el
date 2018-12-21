@@ -64,4 +64,14 @@
 (global-set-key [(meta shift down)] 'move-text-down)
 
 
+;; mac os keybindings
+;; command for control
+;; option for meta
+;; control for super
+
+(when (eq system-type 'darwin)
+   (setq mac-option-modifier 'alt)
+   (setq mac-command-modifier 'control)
+   (setq mac-control-modifier 'super))
+
 (provide 'my-keybindings)
