@@ -70,7 +70,7 @@
 ;; control for super
 
 (when (eq system-type 'darwin)
-   (setq mac-option-modifier 'alt)
+   (setq mac-option-modifier 'meta)
    (setq mac-command-modifier 'control)
    (setq mac-control-modifier 'super))
 

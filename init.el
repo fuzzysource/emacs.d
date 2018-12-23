@@ -32,6 +32,8 @@
 
 ;; Load mode-specific config
 (require 'my-filetype-settings)
+(require 'my-yasnippet)
+(require 'my-ctags)
 (require 'my-yaml-mode)
 (require 'my-rust-mode)
 (require 'my-web-mode)
