@@ -23,4 +23,9 @@
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 
+
+(use-package company-tern)
+(add-to-list 'company-backends 'company-tern)
+(add-hook 'js2-mode-hook 'tern-mode)
+
 (provide 'my-javascript-mode)
