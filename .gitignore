@@ -9,3 +9,5 @@ recentf*
 session.*
 .cache
 host-machine-config.el
+.last-package-update-day
+eshell

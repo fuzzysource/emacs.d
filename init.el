@@ -3,6 +3,13 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (let ((default-directory  "~/.emacs.d/github"))
   (normal-top-level-add-subdirs-to-load-path))
 
@@ -11,7 +18,8 @@
 
 (eval-when-compile
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
-  (require 'use-package))
+  (require 'use-package)
+  (package-initialize))
 (setq use-package-always-ensure t)
 (use-package auto-package-update
   :config
@@ -43,6 +51,7 @@
 (require 'my-java-mode)
 (require 'my-docker-mode)
 (require 'my-python-mode)
+(require 'my-javascript-mode)
 
 ;; Tools
 (require 'my-toolings)
