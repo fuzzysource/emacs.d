@@ -7,7 +7,7 @@
 (turn-on-font-lock)       ; same as syntax on in Vim
 (setq inhibit-splash-screen t)         ; hide welcome screen
 (column-number-mode)
-
+(setq evil-want-fine-undo t)
 
 (use-package flycheck
   :init (global-flycheck-mode))
