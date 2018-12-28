@@ -53,5 +53,6 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+(use-package quelpa-use-package)
 
 (provide 'my-common-settings)

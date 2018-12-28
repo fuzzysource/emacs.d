@@ -11,16 +11,17 @@
 ;; Modeline config starts from here
 (use-package spaceline)
 
-;; (use-package doom-modeline
-;;   :defer t
-;;   :init
-;;   (doom-modeline-init))
+;; (require 'quelpa-use-package)
+(use-package doom-modeline
+  ;; :quelpa (doom-modeline :fetcher github :repo "seagle0128/doom-modeline")
+  :defer t
+  :init
+  (doom-modeline-init))
 
-
-(use-package powerline
-  ;;:init
-  ;;(powerline-default-theme)
-  )
+;; (use-package powerline
+  ;; :init
+  ;; (powerline-default-theme)
+  ;; )
 
 (use-package spacemacs-theme
   :defer t
@@ -35,13 +36,12 @@
 (use-package doom-themes
   :config
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-	doom-themes-enable-italic t) ; if nil, italics is universally disabled)
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled)
   (doom-themes-treemacs-config))
 
-  
 ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
 
-(load-theme 'doom-dracula t)
+(load-theme 'junio t)
 
 (provide 'my-appearance)
