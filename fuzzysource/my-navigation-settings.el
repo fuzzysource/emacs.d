@@ -48,4 +48,6 @@
   (my/neotree-project-dir)
   (ibuffer-sidebar-toggle-sidebar))
 
+(use-package ibuffer-vc)
+
 (provide 'my-navigation-settings)
