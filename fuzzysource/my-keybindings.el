@@ -6,7 +6,7 @@
 (define-key evil-normal-state-map ";" 'comment-line)
 
 ;; neotree
-(global-set-key (kbd "<f8>") 'my/neotree-project-dir)
+(global-set-key (kbd "<f8>") 'my/toggle-sidebar)
 
 
 ;; origami

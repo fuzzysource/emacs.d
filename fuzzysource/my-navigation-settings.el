@@ -18,15 +18,14 @@
   "Open NeoTree using the git root."
   (interactive)
   (let ((project-dir (projectile-project-root))
-	(file-name (buffer-file-name)))
+        (file-name (buffer-file-name)))
     (neotree-toggle)
     (if project-dir
-	(if (neo-global--window-exists-p)
-	    (progn
+        (if (neo-global--window-exists-p)
+            (progn
               (neotree-dir project-dir)
               (neotree-find file-name)))
       (message "Could not find git project root."))))
-
 
 (use-package imenu-list)
 
@@ -36,5 +35,17 @@
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ")
   (setq ivy-use-selectable-prompt t))
+
+(use-package ibuffer-sidebar
+  :commands (ibuffer-sidebar-toggle-sidebar)
+  :config
+  (setq ibuffer-sidebar-use-custom-font ;TODO: )
+  (setq ibuffer-sidebar-face `(:family "Helvetica" :height 140))))
+
+(defun my/toggle-sidebar ()
+  "Open side bar with neotree and ibuffer-sidebar."
+  (interactive)
+  (my/neotree-project-dir)
+  (ibuffer-sidebar-toggle-sidebar))
 
 (provide 'my-navigation-settings)

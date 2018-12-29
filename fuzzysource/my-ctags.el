@@ -8,4 +8,5 @@
   (lambda ()
     (add-hook 'after-save-hook
               'counsel-etags-virtual-update-tags 'append 'local)))
+
 (provide 'my-ctags)
