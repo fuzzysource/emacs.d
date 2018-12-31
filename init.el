@@ -25,7 +25,7 @@
 (require 'my-evil-mode)
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
-
+(require 'my-editor-behaviour-settings)
 
 ;; Load mode-specific config
 (require 'my-filetype-settings)

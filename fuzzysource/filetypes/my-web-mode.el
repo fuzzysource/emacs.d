@@ -10,11 +10,30 @@
   (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode)))
 
+(use-package emmet-mode)
+
 
 (eval-after-load 'company-etags
   '(progn (add-to-list 'company-etags-modes 'web-mode)))
 
 (setq company-etags-everywhere
-      '(web-mode js-jsx-mode html-mode))
+      '(web-mode js-jsx-mode))
+
+(defun my-web-mode-setup ()
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (emmet-mode)
+  (emmet-preview-mode))
+
+(add-hook 'web-mode-hook 'my-web-mode-setup)
+
+(defun my-css-mode-setup ()
+  (setq css-indent-offset 2)
+  (emmet-mode)
+  (emmet-preview-mode))
+
+(add-hook 'css-mode-hook 'my-css-mode-setup)
+
 
 (provide 'my-web-mode)
