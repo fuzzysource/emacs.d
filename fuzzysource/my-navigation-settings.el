@@ -36,11 +36,15 @@
   (setq ivy-count-format "(%d/%d) ")
   (setq ivy-use-selectable-prompt t))
 
+
+(use-package avy)
+(use-package ace-window)
+
 (use-package ibuffer-sidebar
   :commands (ibuffer-sidebar-toggle-sidebar)
   :config
   (setq ibuffer-sidebar-use-custom-font ;TODO: )
-  (setq ibuffer-sidebar-face `(:family "Helvetica" :height 140))))
+        (setq ibuffer-sidebar-face `(:family "Helvetica" :height 140))))
 
 (defun my/toggle-sidebar ()
   "Open side bar with neotree and ibuffer-sidebar."

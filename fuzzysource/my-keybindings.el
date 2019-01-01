@@ -70,8 +70,15 @@
 ;; control for super
 
 (when (eq system-type 'darwin)
-   (setq mac-option-modifier 'meta)
-   (setq mac-command-modifier 'control)
-   (setq mac-control-modifier 'super))
+  (setq mac-option-modifier 'meta)
+  (setq mac-command-modifier 'control)
+  (setq mac-control-modifier 'super))
+
+;; key binding for avy
+
+(global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "s-w") 'ace-window)
+
 
 (provide 'my-keybindings)
