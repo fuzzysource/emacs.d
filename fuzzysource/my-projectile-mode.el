@@ -6,7 +6,7 @@
 (awesome-tab-mode t)
 
 (use-package counsel-projectile)
-
+(counsel-projectile-mode 1)
 
 ;; (setq projectile-switch-project-action 'neotree-projectile-action)
 (add-to-list 'projectile-globally-ignored-files "*.pyc")

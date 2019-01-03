@@ -28,4 +28,11 @@
 (add-to-list 'company-backends 'company-tern)
 (add-hook 'js2-mode-hook 'tern-mode)
 
+(defun start-chrome-headless ()
+  (interactive)
+  (make-process
+   :name "Chrome Headless"
+   :buffer "*Chrome Headless*"
+   :command '("chrome" "--headless" "--remote-debugging-port=9222")))
+
 (provide 'my-javascript-mode)

@@ -7,6 +7,9 @@
 (tool-bar-mode -1)
 (add-to-list 'default-frame-alist
              '(font . "Monaco-13"))
+(custom-set-faces
+ '(font-lock-comment-face
+   ((t (:foreground "#637579" :slant italic :family "source sans pro")))))
 
 ;; Modeline config starts from here
 (use-package spaceline)
