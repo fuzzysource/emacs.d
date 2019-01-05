@@ -15,25 +15,20 @@
 (defun add-projectile-project-root-to-PYTHONPATH ()
   (add-to-list 'python-shell-extra-pythonpaths (projectile-project-root)))
 
-(defun my/python-anaconda ()
+
+(defun my/python-mode-hook ()
   (electric-pair-mode)
   (anaconda-mode)
   (anaconda-eldoc-mode)
   (add-projectile-project-root-to-PYTHONPATH)
+  (setq-local flycheck-python-flake8-executable "python3")
   (highlight-indent-guides-mode))
 
-
-
-(use-package jedi
-  :config
-  (setq jedi:setup-keys t))
-
-(use-package company-jedi)
 
 (defun my/python-jedi ()
   (add-to-list 'company-backends 'company-jedi))
 
-(add-hook 'python-mode-hook 'my/python-anaconda)
+(add-hook 'python-mode-hook 'my/python-mode-hook)
 ;; (add-hook 'python-mode-hook 'jedi:setup)
 ;; (add-hook 'python-mode-hook 'my/python-jedi)
 

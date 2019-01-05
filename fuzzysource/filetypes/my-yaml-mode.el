@@ -1,6 +1,6 @@
 (use-package yaml-mode
   :config
-  (progn
-    (highlight-changes-mode)))
+  (highlight-indent-guides-mode)
+  (highlight-changes-mode))
 
 (provide 'my-yaml-mode)

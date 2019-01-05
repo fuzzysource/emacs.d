@@ -80,5 +80,10 @@
 (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "s-w") 'ace-window)
 
+;; python-mode
+(defun my/anaconda-mode-keybindings ()
+  (local-set-key (kbd "s-g") 'anaconda-mode-find-definitions))
+
+(add-hook 'anaconda-mode-hook 'my/anaconda-mode-keybindings)
 
 (provide 'my-keybindings)

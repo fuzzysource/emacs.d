@@ -2,7 +2,8 @@
 
 (use-package js2-mode
   :init
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js-mode))
+  (add-hook 'js-mode-hook 'js2-minor-mode)
   :config
   (setq-default indent-tabs-mode nil)
   (setq js2-mode-show-parse-errors nil)
