@@ -55,4 +55,6 @@
 
 (use-package quelpa-use-package)
 
+(setq tramp-default-method "ssh")
+
 (provide 'my-common-settings)

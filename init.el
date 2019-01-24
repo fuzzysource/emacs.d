@@ -41,6 +41,7 @@
 (require 'my-docker-mode)
 (require 'my-python-mode)
 (require 'my-javascript-mode)
+(require 'my-language-server)
 
 ;; Tools
 (require 'my-toolings)

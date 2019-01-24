@@ -10,7 +10,7 @@
 
 ;; Highlight current line globally
 (global-hl-line-mode 1)
-(set-face-background hl-line-face "gray13")
+(set-face-background hl-line-face "black")
 
 
 ;; which-key

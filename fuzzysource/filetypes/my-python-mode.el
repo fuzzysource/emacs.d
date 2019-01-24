@@ -1,3 +1,5 @@
+(use-package pyvenv)
+
 (use-package anaconda-mode)
 
 
