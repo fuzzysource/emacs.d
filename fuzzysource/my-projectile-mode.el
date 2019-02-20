@@ -2,8 +2,8 @@
   :init
   (projectile-global-mode))
 
-(require 'awesome-tab)
-(awesome-tab-mode t)
+;; (require 'awesome-tab)
+;; (awesome-tab-mode t)
 
 (use-package counsel-projectile)
 (counsel-projectile-mode 1)

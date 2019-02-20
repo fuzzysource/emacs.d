@@ -98,4 +98,7 @@
 (define-key lsp-ui-mode-map [remap xref-find-references]
   #'lsp-ui-peek-find-references)
 
+;; sr-speedbar
+(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+
 (provide 'my-keybindings)

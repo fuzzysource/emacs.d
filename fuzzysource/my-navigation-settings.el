@@ -50,8 +50,11 @@
   "Open side bar with neotree and ibuffer-sidebar."
   (interactive)
   (my/neotree-project-dir)
-  (ibuffer-sidebar-toggle-sidebar))
+  ;; (ibuffer-sidebar-toggle-sidebar)
+  )
 
-(use-package ibuffer-vc)
+
+(use-package sr-speedbar)
+
 
 (provide 'my-navigation-settings)

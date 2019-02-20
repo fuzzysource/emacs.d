@@ -5,8 +5,6 @@
 (window-divider-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
-(add-to-list 'default-frame-alist
-             '(font . "Monaco-13"))
 
 ;; Modeline config starts from here
 (use-package spaceline)
@@ -17,19 +15,6 @@
   :defer t
   :init
   (doom-modeline-init))
-
-;; (use-package powerline
-  ;; :init
-  ;; (powerline-default-theme)
-  ;; )
-
-(use-package spacemacs-theme
-  :defer t
-  ;; :init
-  ;; (load-theme 'spacemacs-dark t)
-  ;; (load-theme 'wombat t)
-  ;; (spaceline-emacs-theme)
-  )
 
 (use-package sublime-themes)
 

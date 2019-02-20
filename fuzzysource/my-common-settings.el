@@ -53,8 +53,11 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-(use-package quelpa-use-package)
+;; (use-package quelpa-use-package)
 
 (setq tramp-default-method "ssh")
+
+(use-package vlf)
+(require 'vlf-setup)
 
 (provide 'my-common-settings)
