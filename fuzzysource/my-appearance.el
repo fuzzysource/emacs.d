@@ -27,7 +27,4 @@
 ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
 
-;; (load-theme 'junio t)
-(load-theme 'doom-molokai t)
-
 (provide 'my-appearance)

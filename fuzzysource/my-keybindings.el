@@ -1,3 +1,20 @@
+;; super keybindings
+;; Cut, copy, paste
+(global-set-key (kbd "s-x") 'kill-region)
+(global-set-key (kbd "s-c") 'kill-ring-save)
+(global-set-key (kbd "s-v") 'yank)
+
+;; buffer, windows, frames
+(global-set-key (kbd "s-q") 'kill-buffer-and-window)
+
+;; sr-speedbar
+(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+
+
+;; goto-definition
+(global-set-key (kbd "s-g") 'xref-find-definitions-other-window)
+
+
 (global-set-key (kbd "M-2") 'revert-buffer)
 (global-set-key (kbd "M-q") 'fill-paragraph)
 (global-set-key (kbd "C-x /") 'comment-or-uncomment-region)
@@ -10,8 +27,8 @@
 
 
 ;; origami
-(global-set-key (kbd "<f3>") 'origami-toggle-node)
-(global-set-key (kbd "<M-f3>") 'origami-toggle-all-nodes)
+(global-set-key (kbd "s-f") 'origami-toggle-node)
+(global-set-key (kbd "s-F") 'origami-toggle-all-nodes)
 
 
 ;; buffer move
@@ -36,12 +53,6 @@
 (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
 
 
-;; awesome-tab
-(global-set-key (kbd "C-c t g") 'awesome-tab-switch-group)
-(global-set-key (kbd "M-j") 'awesome-tab-backward-tab)
-(global-set-key (kbd "M-k") 'awesome-tab-forward-tab)
-
-
 ;; projectile
 (require 'projectile)
 (global-set-key (kbd "<f9>") 'projectile-grep)
@@ -55,8 +66,10 @@
 
 (eval-after-load 'company
   '(progn
-     (define-key company-active-map (kbd "<f1>") 'company-quickhelp-manual-begin)
-     (define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)))
+     (define-key company-active-map (kbd "<f1>")
+       'company-quickhelp-manual-begin)
+     (define-key company-active-map (kbd "<tab>")
+       'company-complete-common-or-cycle)))
 
 
 ;; move text
@@ -98,7 +111,7 @@
 (define-key lsp-ui-mode-map [remap xref-find-references]
   #'lsp-ui-peek-find-references)
 
-;; sr-speedbar
-(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+
+
 
 (provide 'my-keybindings)
