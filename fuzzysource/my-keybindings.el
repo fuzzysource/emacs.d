@@ -111,7 +111,4 @@
 (define-key lsp-ui-mode-map [remap xref-find-references]
   #'lsp-ui-peek-find-references)
 
-
-
-
 (provide 'my-keybindings)
