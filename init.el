@@ -11,11 +11,11 @@
   (require 'use-package)
   (package-initialize))
 (setq use-package-always-ensure t)
-;; (use-package auto-package-update
-;;   :config
-;;   (setq auto-package-update-delete-old-versions t)
-;;   (setq auto-package-update-hide-results t)
-;;   (auto-package-update-maybe))
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t)
+  (auto-package-update-maybe))
 
 
 (add-to-list 'load-path "~/.emacs.d/fuzzysource/filetypes")
@@ -41,6 +41,7 @@
 (require 'my-docker-mode)
 (require 'my-python-mode)
 (require 'my-javascript-mode)
+(require 'my-go-mode)
 (require 'my-language-server)
 
 ;; Tools
