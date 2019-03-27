@@ -3,6 +3,7 @@
 (let ((default-directory  "~/.emacs.d/github"))
   (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'load-path "~/.emacs.d/fuzzysource")
+
 (require 'host-machine-config)
 
 
