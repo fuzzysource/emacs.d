@@ -9,7 +9,6 @@
 ;; Modeline config starts from here
 (use-package spaceline)
 
-;; (require 'quelpa-use-package)
 (use-package doom-modeline
   ;; :quelpa (doom-modeline :fetcher github :repo "seagle0128/doom-modeline")
   :defer t

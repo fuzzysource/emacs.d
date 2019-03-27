@@ -23,7 +23,7 @@
   (anaconda-mode)
   (anaconda-eldoc-mode)
   (add-projectile-project-root-to-PYTHONPATH)
-  (setq-local flycheck-python-flake8-executable "python3")
+  ;;  (setq-local flycheck-python-flake8-executable "python3")
   (highlight-indent-guides-mode))
 
 

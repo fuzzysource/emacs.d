@@ -12,7 +12,6 @@
 (use-package flycheck
   :init (global-flycheck-mode))
 
-
 (use-package origami
   :init (global-origami-mode))
 
@@ -52,8 +51,6 @@
 (use-package exec-path-from-shell)
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
-
-;; (use-package quelpa-use-package)
 
 (setq tramp-default-method "ssh")
 

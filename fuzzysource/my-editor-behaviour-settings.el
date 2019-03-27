@@ -9,8 +9,8 @@
 (setq ring-bell-function 'ignore)
 
 ;; Highlight current line globally
-(global-hl-line-mode 1)
-(set-face-background hl-line-face "black")
+;; (global-hl-line-mode 1)
+;; (set-face-background hl-line-face "black")
 
 
 ;; which-key
