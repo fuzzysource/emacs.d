@@ -6,7 +6,6 @@
 
 (require 'host-machine-config)
 
-
 (eval-when-compile
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
   (require 'use-package)
@@ -26,7 +25,6 @@
 (require 'my-evil-mode)
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
-(require 'my-editor-behaviour-settings)
 
 ;; Load mode-specific config
 (require 'my-filetype-settings)

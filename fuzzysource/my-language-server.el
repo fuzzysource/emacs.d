@@ -1,17 +1,12 @@
+(use-package lsp-mode)
 
-(use-package lsp-mode
-  :commands lsp
-  :config
-  (require 'lsp-clients))
+(use-package company-lsp)
 
-(use-package company-lsp
-  :commands company-lsp)
-(use-package lsp-ui
-  :commands lsp-ui-mode)
+(use-package lsp-ui)
 
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
-(require 'lsp-ui)
-(require 'company-lsp)
-(push 'company-lsp company-backends)
+(defun init-lsp ()
+  (push 'company-lsp company-backends))
+
+(add-hook 'lsp-mode-hook 'init-lsp)
 
 (provide 'my-language-server)

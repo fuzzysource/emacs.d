@@ -1,6 +1,6 @@
 (use-package yaml-mode
-  :config
-  (highlight-indent-guides-mode)
-  (highlight-changes-mode))
+  :init
+  (add-hook 'yaml-mode-hook 'highlight-indent-guides-mode)
+  (add-hook 'yaml-mode-hook 'highlight-changes-mode))
 
 (provide 'my-yaml-mode)
