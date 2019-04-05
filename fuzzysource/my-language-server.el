@@ -1,12 +1,15 @@
-(use-package lsp-mode)
+(el-get-bundle emacs-lsp/lsp-mode)
+(el-get-bundle emacs-lsp/lsp-ui)
+(el-get-bundle tigersoldier/company-lsp)
 
-(use-package company-lsp)
+(require 'lsp-mode)
+(require 'lsp-clients)
+(require 'lsp-ui)
+(require 'company-lsp)
 
-(use-package lsp-ui)
+(defun my-lsp-hook ()
+  (add-to-list 'company-backends 'company-lsp))
 
-(defun init-lsp ()
-  (push 'company-lsp company-backends))
-
-(add-hook 'lsp-mode-hook 'init-lsp)
+(add-hook 'lsp-mode-hook 'my-lsp-hook)
 
 (provide 'my-language-server)
