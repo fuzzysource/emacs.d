@@ -15,4 +15,21 @@
     (delete-region start end)
     (insert text)))
 
+(define-key-after
+  global-map
+  [menu-bar mymenu]
+  (cons "Magic" (make-sparse-keymap "hoot hoot"))
+  'tools )
+
+(define-key
+  global-map
+  [menu-bar mymenu ue]
+  '("URL encode region" . url-encode-region))
+
+(define-key
+  global-map
+  [menu-bar mymenu ud]
+  '("URL decode region" . url-decode-region))
+
+
 (provide 'my-toolings)

@@ -45,7 +45,11 @@
 
 ;; Tools
 (require 'my-toolings)
+(require 'my-multiple-cursors)
 (require 'my-keybindings)
+
+;; Menus
+
 
 
 ;; Custom file

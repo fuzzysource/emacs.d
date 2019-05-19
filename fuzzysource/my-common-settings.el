@@ -65,4 +65,8 @@
 (setq inhibit-splash-screen t)         ; hide welcome screen
 (column-number-mode)
 
+(use-package exec-path-from-shell)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 (provide 'my-common-settings)

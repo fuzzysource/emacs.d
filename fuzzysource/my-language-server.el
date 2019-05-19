@@ -1,12 +1,20 @@
-(use-package lsp-mode)
+(use-package lsp-mode
+  :commands lsp) 
 
-(use-package company-lsp)
+(use-package lsp-ui
+  :commands lsp-ui-mode)
 
-(use-package lsp-ui)
+(require 'lsp-ui)
 
-(defun init-lsp ()
+(use-package company-lsp
+  :commands lsp-company
+  :init
   (push 'company-lsp company-backends))
 
-(add-hook 'lsp-mode-hook 'init-lsp)
+(lsp-register-client
+ (make-lsp-client :new-connection (lsp-stdio-connection "gopls")
+                  :major-modes '(go-mode)
+                  :server-id 'gopls))
+
 
 (provide 'my-language-server)
