@@ -1,9 +1,19 @@
-(package-initialize)
-
 (let ((default-directory  "~/.emacs.d/github"))
   (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'load-path "~/.emacs.d/fuzzysource")
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(el-get 'sync)
+
+(package-initialize)
 (require 'host-machine-config)
 
 (eval-when-compile
@@ -16,7 +26,6 @@
   (setq auto-package-update-delete-old-versions t)
   (setq auto-package-update-hide-results t)
   (auto-package-update-maybe))
-
 
 (add-to-list 'load-path "~/.emacs.d/fuzzysource/filetypes")
 (require 'my-appearance)

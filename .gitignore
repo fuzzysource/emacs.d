@@ -13,3 +13,7 @@ host-machine-config.el
 eshell
 quelpa
 TAGS
+.lsp-session*
+el-get
+tramp
+transient

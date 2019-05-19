@@ -1,20 +1,15 @@
-(use-package lsp-mode
-  :commands lsp) 
+(el-get-bundle emacs-lsp/lsp-mode)
+(el-get-bundle emacs-lsp/lsp-ui)
+(el-get-bundle tigersoldier/company-lsp)
 
-(use-package lsp-ui
-  :commands lsp-ui-mode)
-
+(require 'lsp-mode)
+(require 'lsp-clients)
 (require 'lsp-ui)
+(require 'company-lsp)
 
-(use-package company-lsp
-  :commands lsp-company
-  :init
-  (push 'company-lsp company-backends))
+(defun my-lsp-hook ()
+  (add-to-list 'company-backends 'company-lsp))
 
-(lsp-register-client
- (make-lsp-client :new-connection (lsp-stdio-connection "gopls")
-                  :major-modes '(go-mode)
-                  :server-id 'gopls))
-
+(add-hook 'lsp-mode-hook 'my-lsp-hook)
 
 (provide 'my-language-server)
