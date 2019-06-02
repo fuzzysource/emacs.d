@@ -1,11 +1,16 @@
-(el-get-bundle emacs-lsp/lsp-mode)
-(el-get-bundle emacs-lsp/lsp-ui)
-(el-get-bundle tigersoldier/company-lsp)
+(use-package lsp-mode
+  :hook (python-mode . lsp)
+  :commands lsp
+  )
 
-(require 'lsp-mode)
-(require 'lsp-clients)
+(use-package lsp-ui :commands  lsp-ui-mode)
+;; optionally
+
+(use-package company-lsp :commands company-lsp)
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 (require 'lsp-ui)
-(require 'company-lsp)
+(use-package dap-mode)
 
 (defun my-lsp-hook ()
   (add-to-list 'company-backends 'company-lsp))

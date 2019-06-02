@@ -9,17 +9,15 @@
        "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
     (goto-char (point-max))
     (eval-print-last-sexp)))
-
+(require 'el-get)
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
+;; (el-get 'sync)
 
 (package-initialize)
+(require 'use-package)
+
 (require 'host-machine-config)
 
-(eval-when-compile
-  ;; Following line is not needed if use-package.el is in ~/.emacs.d
-  (require 'use-package)
-  (package-initialize))
 (setq use-package-always-ensure t)
 (use-package auto-package-update
   :config
@@ -34,6 +32,7 @@
 (require 'my-evil-mode)
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
+(require 'my-language-server)
 
 ;; Load mode-specific config
 (require 'my-filetype-settings)
@@ -50,16 +49,13 @@
 (require 'my-python-mode)
 (require 'my-javascript-mode)
 (require 'my-go-mode)
-(require 'my-language-server)
 
 ;; Tools
 (require 'my-toolings)
-(require 'my-multiple-cursors)
 (require 'my-keybindings)
 
 ;; Menus
-
-
+(require 'my-menu-bar)
 
 ;; Custom file
 (setq custom-file "~/.emacs-custom.el")

@@ -12,13 +12,16 @@
   (add-to-list 'python-shell-extra-pythonpaths
                (projectile-project-root)))
 
+(require 'dap-python)
+(setq dap-python-executable "python3")
 (defun my/python-mode-hook ()
   (electric-pair-mode)
   (anaconda-mode)
   (anaconda-eldoc-mode)
   (add-projectile-project-root-to-PYTHONPATH)
-  (highlight-indent-guides-mode))
-
+  (highlight-indent-guides-mode)
+  (dap-mode 1)
+  (dap-ui-mode 1))
 
 (defun my/python-jedi ()
   (add-to-list 'company-backends 'company-jedi))
@@ -26,5 +29,6 @@
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 ;; (add-hook 'python-mode-hook 'jedi:setup)
 ;; (add-hook 'python-mode-hook 'my/python-jedi)
+
 
 (provide 'my-python-mode)

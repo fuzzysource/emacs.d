@@ -111,4 +111,10 @@
 (define-key lsp-ui-mode-map [remap xref-find-references]
   #'lsp-ui-peek-find-references)
 
+;; multiple-cursors - my-common-settings.el
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-beginnings-of-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mvark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
 (provide 'my-keybindings)

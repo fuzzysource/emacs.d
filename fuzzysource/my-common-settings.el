@@ -9,17 +9,19 @@
 (use-package highlight-indent-guides
   :config
   (setq highlight-indent-guides-method 'character)
-  (setq highlight-indent-guides-character ?\|))
+  (setq highlight-indent-guides-character ?\|)
+  (setq highlight-indent-guides-responsive 'top))
 
 (use-package paredit)
 
 (use-package magit)
 
 (use-package whitespace
-  :init
-  (global-whitespace-mode 1)
-  (setq whitespace-line-column 80) ;; limit line length
-  (setq whitespace-style '(face tabs empty trailing lines-tail)))
+  ;; :init
+  ;; (global-whitespace-mode 1)
+  ;; (setq whitespace-line-column 80) ;; limit line length
+  ;; (setq whitespace-style '(face tabs empty trailing lines-tail))
+  )
 
 (use-package move-text)
 
@@ -64,6 +66,10 @@
 (turn-on-font-lock)       ; same as syntax on in Vim
 (setq inhibit-splash-screen t)         ; hide welcome screen
 (column-number-mode)
+
+
+;; multiple-cursors
+(use-package multiple-cursors)
 
 (use-package exec-path-from-shell)
 (when (memq window-system '(mac ns x))
