@@ -67,6 +67,9 @@
 (setq inhibit-splash-screen t)         ; hide welcome screen
 (column-number-mode)
 
+;; popup-keyring
+
+(use-package popup-kill-ring)
 
 ;; multiple-cursors
 (use-package multiple-cursors)

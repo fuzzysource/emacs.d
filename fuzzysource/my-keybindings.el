@@ -3,6 +3,8 @@
 (global-set-key (kbd "s-x") 'kill-region)
 (global-set-key (kbd "s-c") 'kill-ring-save)
 (global-set-key (kbd "s-v") 'yank)
+(global-set-key (kbd "s-r") 'popup-kill-ring)
+
 
 ;; buffer, windows, frames
 (global-set-key (kbd "s-q") 'kill-buffer-and-window)
