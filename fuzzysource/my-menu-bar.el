@@ -24,11 +24,5 @@
   [menu-bar mymenu edit-beginings-of-lines]
   '("MC - Mark beginning of lines" . mc/edit-beginnings-of-lines))
 
-(define-key-after
-  global-map
-  [menu-bar dap]
-  (cons "DAP" (make-sparse-keymap "dap-mode"))
-  'tools )
-
 
 (provide 'my-menu-bar)
