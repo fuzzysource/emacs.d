@@ -38,6 +38,7 @@
 
 
 (use-package avy)
+
 (use-package ace-window)
 
 (use-package ibuffer-sidebar
@@ -56,5 +57,9 @@
 
 (use-package sr-speedbar)
 
+(el-get-bundle manateelazycat/awesome-tab)
+(require 'awesome-tab)
+(setq awesome-tab-style 'slant)
+(awesome-tab-mode t)
 
 (provide 'my-navigation-settings)
