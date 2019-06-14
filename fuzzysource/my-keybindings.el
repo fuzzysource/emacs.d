@@ -57,8 +57,8 @@
 
 ;; projectile
 (require 'projectile)
-(global-set-key (kbd "<f9>") 'projectile-grep)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;; (global-set-key (kbd "<f9>") 'projectile-grep)
+(define-key projectile-mode-map (kbd "<f9>") 'projectile-command-map)
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
