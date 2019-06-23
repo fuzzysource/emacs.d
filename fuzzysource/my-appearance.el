@@ -31,6 +31,29 @@
 ;; (set-face-attribute 'fixed-pitch nil :family "Iosevka")
 ;; (set-face-attribute 'variable-pitch nil :family "Baskerville")
 
+(use-package dracula-theme)
+
 (use-package color-theme-modern)
+
+(require 'rand-theme)
+;; Themes I *only* want to be selected
+(setq rand-theme-wanted
+      '(doom-nord
+        hickey
+        dracula
+        doom-molokai
+        doom-opera
+        doom-one
+        doom-one-light
+        doom-vibrant
+        brin
+        granger
+        spolsky
+        graham
+        mccarthy
+        wilson
+        junio
+        ))
+(rand-theme)
 
 (provide 'my-appearance)
