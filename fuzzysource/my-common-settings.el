@@ -17,11 +17,10 @@
 (use-package magit)
 
 (use-package whitespace
-  ;; :init
-  ;; (global-whitespace-mode 1)
-  ;; (setq whitespace-line-column 80) ;; limit line length
-  ;; (setq whitespace-style '(face tabs empty trailing lines-tail))
-  )
+  :init
+  (global-whitespace-mode 1)
+  (setq whitespace-line-column 80) ;; limit line length
+  (setq whitespace-style '(face tabs empty trailing lines-tail)))
 
 (use-package move-text)
 
@@ -78,4 +77,10 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+(require 'sublimity)
+(require 'sublimity-scroll)
+;; (require 'sublimity-map) ;; experimental
+;; (require 'sublimity-attractive)
+
+(sublimity-mode 1)
 (provide 'my-common-settings)

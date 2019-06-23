@@ -1,10 +1,19 @@
 ;; super keybindings
-;; Cut, copy, paste
-(global-set-key (kbd "s-x") 'kill-region)
-(global-set-key (kbd "s-c") 'kill-ring-save)
-(global-set-key (kbd "s-v") 'yank)
-(global-set-key (kbd "s-r") 'popup-kill-ring)
+(defun make-global-key-bindings!
+    (&rest mappings)
+  (mapcar
+   (lambda (m)
+     (global-set-key (kbd (nth 0 m)) (nth 1 m)))
+   mappings))
 
+;; Cut, copy, paste
+
+(make-global-key-bindings!
+ '("s-x" 'kill-region)
+ '("s-c" 'kill-region-save)
+ '("s-v" 'yank)
+ '("s-r" 'popup-kill-ring)
+ )
 
 ;; buffer, windows, frames
 (global-set-key (kbd "s-q") 'kill-buffer-and-window)

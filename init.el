@@ -1,7 +1,5 @@
-(let ((default-directory  "~/.emacs.d/github"))
-  (normal-top-level-add-subdirs-to-load-path))
-(add-to-list 'load-path "~/.emacs.d/fuzzysource")
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path "~/.emacs.d/fuzzysource")
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -10,8 +8,7 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 (require 'el-get)
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-;; (el-get 'sync)
+(require 'el-get-packages)
 
 (package-initialize)
 (require 'use-package)
