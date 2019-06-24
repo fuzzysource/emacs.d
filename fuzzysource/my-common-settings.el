@@ -77,10 +77,4 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-(require 'sublimity)
-(require 'sublimity-scroll)
-;; (require 'sublimity-map) ;; experimental
-;; (require 'sublimity-attractive)
-
-(sublimity-mode 1)
 (provide 'my-common-settings)
