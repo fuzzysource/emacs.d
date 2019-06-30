@@ -12,9 +12,13 @@
 
 (el-get 'sync)
 (setq package-archives
-      '(("gnu" . "https://elpa.gnu.org/packages/")
-        ("melpa-stable" . "https://stable.melpa.org/packages/")
-        ("melpa" . "https://melpa.org/packages/")))
+       '(
+         ("melpa" . "https://melpa.org/packages/")
+         ("gnu-elpa" . "https://elpa.gnu.org/packages/")
+         ("melpa-mirror" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
+         ("org-mirror"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
+         ("gnu-mirror"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")
+         ))
 
 (package-initialize)
 (require 'use-package)

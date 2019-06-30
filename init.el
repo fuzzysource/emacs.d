@@ -3,6 +3,7 @@
 (add-to-list 'load-path "~/.emacs.d/fuzzysource/filetypes")
 
 (require 'package-system)
+(require 'my-treemacs)
 (require 'my-appearance)
 (require 'my-edit-settings)
 (require 'my-projectile-mode)
@@ -10,7 +11,6 @@
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
 (require 'my-language-server)
-(require 'my-treemacs)
 
 ;; Load mode-specific config
 (require 'my-filetype-settings)

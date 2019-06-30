@@ -34,7 +34,7 @@
 (define-key evil-normal-state-map ";" 'comment-line)
 
 ;; neotree
-(global-set-key (kbd "<f8>") 'my/toggle-sidebar)
+(global-set-key (kbd "<f8>") 'treemacs)
 
 
 ;; origami
