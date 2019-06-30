@@ -51,4 +51,11 @@
 (use-package ace-window)
 (use-package avy)
 
+
+(use-package lsp-mode)
+(use-package lsp-ui)
+(use-package company-lsp)
+(use-package lsp-treemacs)
+(use-package dap-mode)
+
 (provide 'install-packages)

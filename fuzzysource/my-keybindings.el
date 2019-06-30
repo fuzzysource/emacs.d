@@ -133,4 +133,13 @@
 (global-set-key (kbd "<C-tab>") 'awesome-tab-forward)
 (global-set-key (kbd "C-`") 'awesome-tab-backward)
 
+;; dap mode
+(define-key dap-mode-map (kbd "<f7>") 'dap-next)
+(define-key dap-mode-map (kbd "C-<f7>") 'dap-continue)
+(define-key dap-mode-map (kbd "<f6>") 'dap-step-in)
+(define-key dap-mode-map (kbd "C-<f6>") 'dap-step-out)
+(define-key dap-mode-map (kbd "C-<return>") 'dap-breakpoint-toggle)
+(define-key dap-mode-map (kbd "<f5>") 'dap-ui-locals)
+
+
 (provide 'my-keybindings)

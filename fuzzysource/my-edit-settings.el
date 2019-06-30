@@ -9,7 +9,8 @@
 (setq inhibit-splash-screen t)         ; hide welcome screen
 (column-number-mode)
 (setq tramp-default-method "ssh")
-
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 ;; enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 

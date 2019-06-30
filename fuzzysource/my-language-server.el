@@ -1,16 +1,12 @@
-(use-package lsp-mode
-  :commands lsp
-  )
-
-(use-package lsp-ui :commands  lsp-ui-mode)
-;; optionally
-
-(use-package company-lsp :commands company-lsp)
-(use-package helm-lsp :commands helm-lsp-workspace-symbol)
-(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+(require 'lsp-mode)
 (require 'lsp-ui)
+;; optionally
+(require 'company-lsp)
+(require 'lsp-ui)
+(require 'lsp-treemacs)
+(require 'dap-mode)
 
-(defun my/setup-dap-menu ()
+(defun setup-dap-menu ()
   (define-key-after global-map
     [menu-bar dap-menu ]
     (cons "DAP" (make-sparse-keymap "dap-mode"))
@@ -57,15 +53,16 @@
     '("DAP debug (new session)" . dap-debug))
   )
 
-(use-package dap-mode
-  :init
-  (my/setup-dap-menu)
-  :bind
-  ("<f7>" . dap-next)
-  ("C-<f7>" . dap-continue)
-  ("<f6>" . dap-step-in)
-  ("C-<f6>" . dap-step-out)
-  ("C-<return>" . dap-breakpoint-toggle))
+(setup-dap-menu)
+
+;; (use-package dap-mode
+;;   :init
+;;   :bind
+;;   ("<f7>" . dap-next)
+;;   ("C-<f7>" . dap-continue)
+;;   ("<f6>" . dap-step-in)
+;;   ("C-<f6>" . dap-step-out)
+;;   ("C-<return>" . dap-breakpoint-toggle))
 
 (defun my-lsp-hook ()
   (add-to-list 'company-backends 'company-lsp))
