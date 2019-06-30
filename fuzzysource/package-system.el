@@ -20,7 +20,7 @@
 (require 'use-package)
 (require 'quelpa)
 (require 'quelpa-use-package)
-
+(setq quelpa-update-melpa-p nil)
 (setq use-package-ensure-function 'quelpa)
 (setq use-package-always-ensure t)
 

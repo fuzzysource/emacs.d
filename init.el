@@ -10,6 +10,7 @@
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
 (require 'my-language-server)
+(require 'my-treemacs)
 
 ;; Load mode-specific config
 (require 'my-filetype-settings)
