@@ -1,11 +1,10 @@
-(use-package projectile
-  :init
-  (projectile-global-mode))
+(require 'projectile)
+(projectile-global-mode)
 
 ;; (require 'awesome-tab)
 ;; (awesome-tab-mode t)
 
-(use-package counsel-projectile)
+(require 'counsel-projectile)
 (counsel-projectile-mode 1)
 
 ;; (setq projectile-switch-project-action 'neotree-projectile-action)

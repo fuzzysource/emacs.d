@@ -4,4 +4,4 @@
 (el-get 'sync)
 
 (provide 'el-get-packages)
-cou
+

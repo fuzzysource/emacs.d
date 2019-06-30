@@ -1,8 +1,6 @@
-(use-package evil
-  :init
-  (evil-mode 1)
-  (setq evil-want-fine-undo t))
+(require 'evil)
+(evil-mode 1)
+(setq evil-want-fine-undo t)
 
-(use-package evil-commentary)
-
+(require 'evil-commentary)
 (provide 'my-evil-mode)
