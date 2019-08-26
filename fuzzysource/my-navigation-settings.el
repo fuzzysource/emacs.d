@@ -4,11 +4,11 @@
 (add-to-list 'counsel-etags-ignore-filenames "*.json")
 
 
-;; (require 'neotree)
+(require 'neotree)
 
-;; (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-;; (setq neo-window-fixed-size nil)
-;; (setq neo-window-width 35)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-window-fixed-size nil)
+(setq neo-window-width 35)
 
 (defun my/neotree-project-dir ()
   "Open NeoTree using the git root."
@@ -40,7 +40,7 @@
 ;; (ibuffer-sidebar-toggle-sidebar)
 ;; (setq ibuffer-sidebar-face `(:family "Source Sans Pro" :height 140))
 
-(defun my/toggle-sidebar ()
+(defun toggle-neotree-sidebar ()
   "Open side bar with neotree and ibuffer-sidebar."
   (interactive)
   (my/neotree-project-dir)

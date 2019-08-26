@@ -1,19 +1,6 @@
 ;; super keybindings
-(defun make-global-key-bindings!
-    (&rest mappings)
-  (mapcar
-   (lambda (m)
-     (global-set-key (kbd (nth 0 m)) (nth 1 m)))
-   mappings))
 
-;; Cut, copy, paste
-
-(make-global-key-bindings!
- '("s-x" 'kill-region)
- '("s-c" 'kill-region-save)
- '("s-v" 'yank)
- '("s-r" 'popup-kill-ring)
- )
+(global-set-key (kbd "s-r") 'popup-kill-ring)
 
 ;; buffer, windows, frames
 (global-set-key (kbd "s-q") 'kill-buffer-and-window)
@@ -34,7 +21,7 @@
 (define-key evil-normal-state-map ";" 'comment-line)
 
 ;; neotree
-(global-set-key (kbd "<f8>") 'treemacs)
+(global-set-key (kbd "<f8>") 'toggle-neotree-sidebar)
 
 
 ;; origami
