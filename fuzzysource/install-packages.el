@@ -3,8 +3,11 @@
 (use-package sublime-themes)
 (use-package doom-themes)
 (use-package dracula-theme)
+(use-package chocolate-theme)
 (use-package rand-theme
   :quelpa (rand-theme :fetcher github :repo "gopar/rand-theme"))
+(use-package golden-ratio
+  :quelpa (golden-ratio :fetcher github :repo "roman/golden-ratio.el"))
 (use-package all-the-icons)
 
 (use-package company)

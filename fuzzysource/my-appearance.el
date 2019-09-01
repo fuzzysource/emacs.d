@@ -20,11 +20,15 @@
         graham
         wilson
         junio
+        chocolate
         ))
 (rand-theme)
 ;; (doom-themes-treemacs-config)
 
 (require 'doom-modeline)
 (doom-modeline-mode 1)
+
+(require 'golden-ratio)
+(golden-ratio-mode 1)
 
 (provide 'my-appearance)

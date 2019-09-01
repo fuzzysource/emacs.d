@@ -1,4 +1,6 @@
-(use-package indium)
+(use-package json-process-client)
+(use-package indium
+  :quelpa (indium :fetcher github :repo "NicolasPetton/Indium"))
 
 (use-package js2-mode
   :init
