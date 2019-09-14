@@ -12,13 +12,7 @@
 
 (use-package company)
 (use-package company-quickhelp)
-
-(use-package awesome-tab
-  :ensure t
-  :quelpa (awesome-tab
-           :fetcher github
-           :repo "manateelazycat/awesome-tab"))
-
+(use-package centaur-tabs)
 (use-package buffer-move)
 (use-package origami)
 (use-package flycheck)
@@ -60,5 +54,13 @@
 (use-package company-lsp)
 (use-package lsp-treemacs)
 (use-package dap-mode)
+
+;; JS family (JS, typescript, node, ...)
+;; (use-package json-process-client)
+;; (use-package indium
+;;   :quelpa (indium :fetcher github :repo "NicolasPetton/Indium"))
+(use-package prettier-js)
+(use-package tide)
+(use-package ng2-mode)
 
 (provide 'install-packages)

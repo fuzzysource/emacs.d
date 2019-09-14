@@ -50,8 +50,15 @@
 
 (require 'sr-speedbar)
 
-(require 'awesome-tab)
-(setq awesome-tab-style 'slant)
-(awesome-tab-mode t)
+(require 'centaur-tabs)
+(centaur-tabs-mode t)
+(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
+(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
+(setq centaur-tabs-height 32)
+(setq centaur-tabs-set-icons t)
+;; (setq centaur-tabs-gray-out-icons 'buffer)
+(setq centaur-tabs-set-bar 'left)
+(setq centaur-tabs-set-modified-marker t)
+(setq centaur-tabs-modified-marker "o")
 
 (provide 'my-navigation-settings)

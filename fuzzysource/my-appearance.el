@@ -29,6 +29,5 @@
 (doom-modeline-mode 1)
 
 (require 'golden-ratio)
-(golden-ratio-mode 1)
 
 (provide 'my-appearance)
