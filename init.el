@@ -3,7 +3,8 @@
 (add-to-list 'load-path "~/.emacs.d/fuzzysource/filetypes")
 
 (require 'package-system)
-(require 'my-treemacs)
+
+;; (require 'my-treemacs)
 (require 'my-appearance)
 (require 'my-edit-settings)
 (require 'my-projectile-mode)
