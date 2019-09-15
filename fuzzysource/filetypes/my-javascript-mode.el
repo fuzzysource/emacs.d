@@ -29,6 +29,13 @@
   (tide-setup)
   (tide-hl-identifier-mode)
   )
-
 (add-hook 'typescript-mode-hook 'my-typescript-hook)
+
+(projectile-register-project-type 'webpack '("webpack.config.js")
+                                  :compile "npx webpack"
+                                  :run "npx webpack-dev-server"
+                                  :test "npm test"
+                                  :test-suffix ".test")
+
+
 (provide 'my-javascript-mode)

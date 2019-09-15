@@ -13,10 +13,8 @@
 (add-to-list 'projectile-globally-ignored-directories ".tox" )
 (add-to-list 'projectile-globally-ignored-directories "node_modules" )
 
-(projectile-register-project-type 'webpack '("webpack.config.js")
-                                  :compile "npx webpack"
-                                  :run "npx webpack-dev-server"
-                                  :test "npm test"
-                                  :test-suffix ".test")
+;; Dir-local projectile config
+
+;; M-x projectile-edit-dir-locals
 
 (provide 'my-projectile-mode)

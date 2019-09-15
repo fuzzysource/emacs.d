@@ -115,11 +115,6 @@
 (global-set-key (kbd "C-<") 'mc/mvark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-;; awesome-tab's keybindings
-
-(global-set-key (kbd "<C-tab>") 'awesome-tab-forward)
-(global-set-key (kbd "C-`") 'awesome-tab-backward)
-
 ;; dap mode
 (define-key dap-mode-map (kbd "<f7>") 'dap-next)
 (define-key dap-mode-map (kbd "C-<f7>") 'dap-continue)
@@ -129,6 +124,6 @@
 
 (global-set-key (kbd "<f5>") 'revert-buffer)
 (global-set-key (kbd "<f12>") 'golden-ratio)
-
+(global-set-key (kbd "<f3>") 'switch-to-buffer)
 
 (provide 'my-keybindings)
