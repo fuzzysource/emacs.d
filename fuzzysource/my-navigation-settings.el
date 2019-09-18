@@ -1,14 +1,17 @@
-(require 'counsel-etags)
-(add-to-list 'counsel-etags-ignore-directories "__pycache__")
-(add-to-list 'counsel-etags-ignore-filenames "*.pyc")
-(add-to-list 'counsel-etags-ignore-filenames "*.json")
+;; File browsing and navigation
+;; (use-package ranger)
+(use-package counsel-etags
+  :config
+  (add-to-list 'counsel-etags-ignore-directories "__pycache__")
+  (add-to-list 'counsel-etags-ignore-filenames "*.pyc")
+  (add-to-list 'counsel-etags-ignore-filenames "*.json"))
 
-
-(require 'neotree)
-
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-(setq neo-window-fixed-size nil)
-(setq neo-window-width 35)
+(use-package neotree
+  :config
+  (setq projectile-switch-project-action 'neotree-projectile-action)
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (setq neo-window-fixed-size nil)
+  (setq neo-window-width 35))
 
 (defun my/neotree-project-dir ()
   "Open NeoTree using the git root."
@@ -23,23 +26,6 @@
               (neotree-find file-name)))
       (message "Could not find git project root."))))
 
-(require 'imenu-list)
-
-(require 'ivy)
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-(setq ivy-count-format "(%d/%d) ")
-(setq ivy-use-selectable-prompt t)
-
-
-(require 'avy)
-
-(require 'ace-window)
-
-(require 'ibuffer-sidebar)
-;; (ibuffer-sidebar-toggle-sidebar)
-;; (setq ibuffer-sidebar-face `(:family "Source Sans Pro" :height 140))
-
 (defun toggle-neotree-sidebar ()
   "Open side bar with neotree and ibuffer-sidebar."
   (interactive)
@@ -47,18 +33,37 @@
   ;; (ibuffer-sidebar-toggle-sidebar)
   )
 
+(use-package imenu-list)
+(use-package ivy
+  :init
+  (ivy-mode 1)
+  :config
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "(%d/%d) ")
+  (setq ivy-use-selectable-prompt t))
 
-(require 'sr-speedbar)
+(use-package ibuffer-sidebar
+  ;; :config
+  ;; (ibuffer-sidebar-toggle-sidebar)
+  ;; (setq ibuffer-sidebar-face `(:family "Source Sans Pro" :height 140))
+)
 
-(require 'centaur-tabs)
-(centaur-tabs-mode t)
-(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
-(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
-(setq centaur-tabs-height 32)
-(setq centaur-tabs-set-icons t)
-;; (setq centaur-tabs-gray-out-icons 'buffer)
-(setq centaur-tabs-set-bar 'left)
-(setq centaur-tabs-set-modified-marker t)
-(setq centaur-tabs-modified-marker "o")
+(use-package sr-speedbar)
+
+(use-package ace-window)
+
+(use-package avy)
+
+(use-package centaur-tabs
+  :init
+  (centaur-tabs-mode t)
+  :config
+  (setq centaur-tabs-height 32)
+  (setq centaur-tabs-set-icons t)
+  ;; (setq centaur-tabs-gray-out-icons 'buffer)
+  (setq centaur-tabs-set-bar 'left)
+  (setq centaur-tabs-set-modified-marker t)
+  (setq centaur-tabs-modified-marker "o"))
+
 
 (provide 'my-navigation-settings)

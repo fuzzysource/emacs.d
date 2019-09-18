@@ -11,7 +11,9 @@
 (require 'my-evil-mode)
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
-(require 'my-language-server)
+(require 'my-emacs-lsp)
+(require 'my-eglot)
+(require 'my-dap)
 
 ;; Load mode-specific config
 (require 'my-filetype-settings)
@@ -28,6 +30,8 @@
 (require 'my-python-mode)
 (require 'my-javascript-mode)
 (require 'my-go-mode)
+(require 'my-typescript-mode)
+
 
 ;; Tools
 (require 'my-toolings)

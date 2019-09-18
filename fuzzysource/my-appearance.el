@@ -1,12 +1,25 @@
+;; (use-package spaceline)
 
-;; (setq doom-themes-enable-bold t
-;;       doom-themes-enable-italic t)
-(require 'doom-themes)
-(doom-themes-org-config)
+(use-package doom-modeline
+  :init
+  (doom-modeline-mode 1))
 
-(require 'rand-theme)
-;; Themes I *only* want to be selected
-(setq rand-theme-wanted
+(use-package sublime-themes)
+
+(use-package doom-themes
+  :init
+  (doom-themes-org-config)
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+
+(use-package dracula-theme)
+
+;; (use-package chocolate-theme)
+
+(use-package rand-theme
+  :straight (rand-theme :host github :repo "gopar/rand-theme")
+  :init
+  (setq rand-theme-wanted
       '(doom-nord
         hickey
         dracula
@@ -22,12 +35,10 @@
         junio
         chocolate
         ))
-(rand-theme)
-;; (doom-themes-treemacs-config)
+  (rand-theme))
 
-(require 'doom-modeline)
-(doom-modeline-mode 1)
-
-(require 'golden-ratio)
+(use-package golden-ratio
+  :straight (golden-ratio :host github :repo "roman/golden-ratio.el"))
+(use-package all-the-icons)
 
 (provide 'my-appearance)

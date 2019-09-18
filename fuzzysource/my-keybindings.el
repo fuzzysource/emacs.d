@@ -52,9 +52,10 @@
 
 
 ;; projectile
-(require 'projectile)
+(eval-after-load 'projectile
+  (progn
+    (define-key projectile-mode-map (kbd "<f9>") 'projectile-command-map)))
 ;; (global-set-key (kbd "<f9>") 'projectile-grep)
-(define-key projectile-mode-map (kbd "<f9>") 'projectile-command-map)
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -103,11 +104,12 @@
 
 
 ;; language server mode
-
-(define-key lsp-ui-mode-map [remap xref-find-definitions]
-  #'lsp-ui-peek-find-definitions)
-(define-key lsp-ui-mode-map [remap xref-find-references]
-  #'lsp-ui-peek-find-references)
+(eval-after-load 'lsp-ui
+  '(progn
+     (define-key lsp-ui-mode-map [remap xref-find-definitions]
+       #'lsp-ui-peek-find-definitions)
+     (define-key lsp-ui-mode-map [remap xref-find-references]
+       #'lsp-ui-peek-find-references)))
 
 ;; multiple-cursors - my-common-settings.el
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-beginnings-of-lines)

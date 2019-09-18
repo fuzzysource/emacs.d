@@ -1,4 +1,4 @@
-(require 'prettier-js)
+(use-package prettier-js)
 
 ;; use local eslint from node_modules before global
 ;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
@@ -22,14 +22,6 @@
 ;;    :buffer "*Chrome Headless*"
 ;;    :command '("chrome" "--headless" "--remote-debugging-port=9222")))
 
-(require 'tide)
-(defun my-typescript-hook ()
-  (setq typescript-indent-level 2)
-  (prettier-js-mode 1)
-  (tide-setup)
-  (tide-hl-identifier-mode)
-  )
-(add-hook 'typescript-mode-hook 'my-typescript-hook)
 
 (projectile-register-project-type 'webpack '("webpack.config.js")
                                   :compile "npx webpack"

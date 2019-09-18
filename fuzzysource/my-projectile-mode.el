@@ -1,18 +1,19 @@
-(require 'projectile)
-(projectile-global-mode)
+;; Projectile
+(use-package projectile
+  :init
+  (projectile-global-mode)
+  (add-to-list 'projectile-globally-ignored-files "*.pyc")
+  (add-to-list 'projectile-globally-ignored-directories "__pycache__")
+  (add-to-list 'projectile-globally-ignored-directories ".tox")
+  (add-to-list 'projectile-globally-ignored-directories "straight")
+  (add-to-list 'projectile-globally-ignored-directories "node_modules"))
 
-;; (require 'awesome-tab)
-;; (awesome-tab-mode t)
+(use-package counsel-projectile
+  :init
+  (counsel-projectile-mode 1))
 
-(require 'counsel-projectile)
-(counsel-projectile-mode 1)
 
 ;; (setq projectile-switch-project-action 'neotree-projectile-action)
-(add-to-list 'projectile-globally-ignored-files "*.pyc")
-(add-to-list 'projectile-globally-ignored-directories "__pycache__")
-(add-to-list 'projectile-globally-ignored-directories ".tox" )
-(add-to-list 'projectile-globally-ignored-directories "node_modules" )
-
 ;; Dir-local projectile config
 
 ;; M-x projectile-edit-dir-locals
