@@ -77,6 +77,6 @@ PACKAGE is installed only if not already present.  The file is opened in MODE."
          (mode (cadr (cdr entry))))
      (unless (package-installed-p package)
        (prelude-auto-install extension package mode))))
-prelude-auto-install-alist)
+ prelude-auto-install-alist)
 
 (provide 'my-filetype-settings)

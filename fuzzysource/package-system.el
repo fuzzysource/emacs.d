@@ -1,18 +1,18 @@
 ;; Setup el-get, use-package, quelpa-use-package
 
 (setq package-archives
-       '(
-         ("melpa" . "https://melpa.org/packages/")
-         ("gnu-elpa" . "https://elpa.gnu.org/packages/")
-         ("melpa-mirror" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
-         ("org-mirror"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
-         ("gnu-mirror"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")
-         ))
+      '(
+        ("melpa" . "https://melpa.org/packages/")
+        ("gnu-elpa" . "https://elpa.gnu.org/packages/")
+        ("melpa-mirror" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
+        ("org-mirror"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
+        ("gnu-mirror"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")
+        ))
 (package-initialize)
-(unless (package-installed-p 'exec-path-from-shell)
-  (package-install 'exec-path-from-shell))
-
+(package-refresh-contents)
 (when (memq window-system '(mac ns x))
+  (unless (package-installed-p 'exec-path-from-shell)
+    (package-install 'exec-path-from-shell))
   (exec-path-from-shell-initialize))
 
 (defvar bootstrap-version)

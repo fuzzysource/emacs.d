@@ -8,11 +8,6 @@
 ;; sr-speedbar
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 
-
-;; goto-definition
-(global-set-key (kbd "s-g") 'xref-find-definitions-other-window)
-
-
 (global-set-key (kbd "M-2") 'revert-buffer)
 (global-set-key (kbd "M-q") 'fill-paragraph)
 (global-set-key (kbd "C-x /") 'comment-or-uncomment-region)
@@ -103,13 +98,6 @@
 (define-key ibuffer-name-map (kbd "<mouse-2>") 'ibuffer-mouse-toggle-mark)
 
 
-;; language server mode
-(eval-after-load 'lsp-ui
-  '(progn
-     (define-key lsp-ui-mode-map [remap xref-find-definitions]
-       #'lsp-ui-peek-find-definitions)
-     (define-key lsp-ui-mode-map [remap xref-find-references]
-       #'lsp-ui-peek-find-references)))
 
 ;; multiple-cursors - my-common-settings.el
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-beginnings-of-lines)

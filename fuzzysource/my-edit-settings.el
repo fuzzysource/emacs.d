@@ -1,4 +1,7 @@
 (use-package buffer-move)
+(use-package format-all
+  :straight (format-all :host github :repo "lassik/emacs-format-all-the-code")
+  :hook (before-save . format-all-buffer))
 
 (use-package origami
   :init
@@ -28,8 +31,8 @@
 (use-package ansi-color
   :init
   (defun my/ansi-colorize-buffer ()
-  (let ((buffer-read-only nil))
-    (ansi-color-apply-on-region (point-min) (point-max))))
+    (let ((buffer-read-only nil))
+      (ansi-color-apply-on-region (point-min) (point-max))))
   (add-hook 'compilation-filter-hook 'my/ansi-colorize-buffer))
 
 (use-package which-key
