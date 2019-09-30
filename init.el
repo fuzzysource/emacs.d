@@ -31,6 +31,7 @@
 (require 'my-javascript-mode)
 (require 'my-go-mode)
 (require 'my-typescript-mode)
+(require 'my-json-mode)
 
 
 ;; Tools
