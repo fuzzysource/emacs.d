@@ -2,7 +2,10 @@
   :config
   (setq indent-tabs-mode nil)
   (setq tab-width 4)
-  (setq flycheck-checker 'go-gofmt))
+  (setq flycheck-checker 'go-gofmt)
+  (require 'dap-go)
+  (dap-go-setup)
+  )
 
 (use-package company-go
   :hook go-mode

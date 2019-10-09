@@ -46,7 +46,7 @@
   ;; :config
   ;; (ibuffer-sidebar-toggle-sidebar)
   ;; (setq ibuffer-sidebar-face `(:family "Source Sans Pro" :height 140))
-)
+  )
 
 (use-package sr-speedbar)
 
