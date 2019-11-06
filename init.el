@@ -5,6 +5,7 @@
 (require 'package-system)
 
 ;; (require 'my-treemacs)
+(require 'my-tab)
 (require 'my-appearance)
 (require 'my-edit-settings)
 (require 'my-projectile-mode)

@@ -25,39 +25,39 @@
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
-(dap-register-debug-template
- "Python :: Debug with all tests"
- (list :type "python"
-       :args "-m pytest -sv tests"
-       :cwd nil
-       :target-module ""
-       :request "launch"
-       :name "Python :: Debug with all tests"))
+;; (dap-register-debug-template
+;;  "Python :: Debug with all tests"
+;;  (list :type "python"
+;;        :args "-m pytest -sv tests"
+;;        :cwd nil
+;;        :target-module ""
+;;        :request "launch"
+;;        :name "Python :: Debug with all tests"))
 
-(dap-register-debug-template
- "Python :: Debug with all marked tests"
-  (list :type "python"
-        :args "-m pytest -sv ./tests -m testit"
-        :cwd nil
-        :target-module ""
-        :request "launch"
-        :name "Python :: Debug with all tests"))
+;; (dap-register-debug-template
+;;  "Python :: Debug with all marked tests"
+;;   (list :type "python"
+;;         :args "-m pytest -sv ./tests -m testit"
+;;         :cwd nil
+;;         :target-module ""
+;;         :request "launch"
+;;         :name "Python :: Debug with all tests"))
 
 
- (defun setup-dap-mode ()
-   (dap-register-debug-template
-    "Python :: Debug this project"
-    (list :type "python"
-          :args nil
-          :cwd nil
-          :target-module (symbol-value 'target-module)
-          :request "launch"
-          :name "Debug this project (python)"))
-   (setq dap-python-executable
-         (if (projectile-project-root)
-             (concat "PYTHONPATH=" (projectile-project-root) " python3")
-           "python3"))
-  )
+;;  (defun setup-dap-mode ()
+;;    (dap-register-debug-template
+;;     "Python :: Debug this project"
+;;     (list :type "python"
+;;           :args nil
+;;           :cwd nil
+;;           :target-module (symbol-value 'target-module)
+;;           :request "launch"
+;;           :name "Debug this project (python)"))
+;;    (setq dap-python-executable
+;;          (if (projectile-project-root)
+;;              (concat "PYTHONPATH=" (projectile-project-root) " python3")
+;;            "python3"))
+;;   )
 
 (projectile-register-project-type
  'tox-project '("tox.ini")

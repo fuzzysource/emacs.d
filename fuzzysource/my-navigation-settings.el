@@ -11,7 +11,21 @@
   (setq projectile-switch-project-action 'neotree-projectile-action)
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
   (setq neo-window-fixed-size nil)
-  (setq neo-window-width 35))
+  (setq neo-window-width 35)
+  (setq neo-autorefresh nil)
+  (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+  (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
+  (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+  (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+  (evil-define-key 'normal neotree-mode-map (kbd "g") 'neotree-refresh)
+  (evil-define-key 'normal neotree-mode-map (kbd "n") 'neotree-next-line)
+  (evil-define-key 'normal neotree-mode-map (kbd "p") 'neotree-previous-line)
+  (evil-define-key 'normal neotree-mode-map (kbd "A") 'neotree-stretch-toggle)
+  (evil-define-key 'normal neotree-mode-map (kbd "H") 'neotree-hidden-file-toggle)
+  :bind
+  ("<f8>" . toggle-neotree-sidebar)
+  )
+
 
 (defun my/neotree-project-dir ()
   "Open NeoTree using the git root."
@@ -53,17 +67,5 @@
 (use-package ace-window)
 
 (use-package avy)
-
-(use-package centaur-tabs
-  :init
-  (centaur-tabs-mode t)
-  :config
-  (setq centaur-tabs-height 32)
-  (setq centaur-tabs-set-icons t)
-  ;; (setq centaur-tabs-gray-out-icons 'buffer)
-  (setq centaur-tabs-set-bar 'left)
-  (setq centaur-tabs-set-modified-marker t)
-  (setq centaur-tabs-modified-marker "o"))
-
 
 (provide 'my-navigation-settings)
