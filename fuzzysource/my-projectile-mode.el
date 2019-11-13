@@ -8,12 +8,18 @@
   (add-to-list 'projectile-globally-ignored-directories ".tox")
   (add-to-list 'projectile-globally-ignored-directories "straight")
   (add-to-list 'projectile-globally-ignored-directories "node_modules")
-  (add-to-list 'projectile-globally-ignored-directories ".extension")
-  )
+  (add-to-list 'projectile-globally-ignored-directories ".extension"))
 
 (use-package counsel-projectile
   :init
   (counsel-projectile-mode 1))
+
+(use-package ripgrep
+  :straight (ripgrep :host github :repo "nlamirault/ripgrep.el")
+  :after (projectile)
+  :init
+  (global-set-key (kbd "C-c C-g") #'projectile-ripgrep))
+
 
 
 ;; (setq projectile-switch-project-action 'neotree-projectile-action)
