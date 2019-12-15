@@ -1,5 +1,5 @@
 (use-package treemacs
-  :ensure t
+  :straight (treemacs :host github :repo "Alexander-Miller/treemacs")
   :defer t
   :init
   (with-eval-after-load 'winum
@@ -62,20 +62,23 @@
         ("C-x t M-t" . treemacs-find-tag)))
 
 (use-package treemacs-evil
+  :straight t
   :after treemacs evil
-  :ensure t)
+  )
 
 (use-package treemacs-projectile
+  :straight t
   :after treemacs projectile
-  :ensure t)
+  )
 
 (use-package treemacs-icons-dired
+  :straight t
   :after treemacs dired
-  :ensure t
   :config (treemacs-icons-dired-mode))
 
 (use-package treemacs-magit
+  :straight t
   :after treemacs magit
-  :ensure t)
+  )
 
 (provide 'my-treemacs)

@@ -1,16 +1,19 @@
 (use-package go-mode
+  :hook (go-mode . lsp-deferred)
   :config
   (setq indent-tabs-mode nil)
   (setq tab-width 4)
   (setq flycheck-checker 'go-gofmt)
   (require 'dap-go)
-  (dap-go-setup)
-  )
+  (dap-go-setup))
 
-(use-package company-go
-  :hook go-mode
-  :config
-  (push 'company-go company-backends))
+(use-package go-add-tags
+  :straight (go-add-tags :host github :repo "syohex/emacs-go-add-tags"))
+
+;; (use-package company-go
+;;   :hook go-mode
+;;   :config
+;;   (push 'company-go company-backends))
 
 (projectile-register-project-type 'go-mod '("go.mod")
                                   :compile "go build"

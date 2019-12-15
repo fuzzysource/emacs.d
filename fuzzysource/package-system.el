@@ -9,11 +9,6 @@
         ("gnu-mirror"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")
         ))
 (package-initialize)
-(when (memq window-system '(mac ns x))
-  (unless (package-installed-p 'exec-path-from-shell)
-    (package-refresh-contents)
-    (package-install 'exec-path-from-shell))
-  (exec-path-from-shell-initialize))
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
