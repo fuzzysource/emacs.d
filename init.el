@@ -22,23 +22,7 @@
 (require 'evil)
 (require 'keybinding)
 
-
-;; (require 'my-treemacs)
-;; (require 'my-tab)  :init
-;; (global-set-key (kbd "C-c C-g") #'projectile-ripgrep)
-;; (require 'my-edit-settings)
-;; (require 'my-projectile-mode)
-;; (require 'my-evil-mode)
-;; (require 'my-navigation-settings)
-;; (require 'my-auto-complete)
-;; (require 'my-emacs-lsp)
-;; (require 'my-eglot)
-;; (require 'my-dap)
-
-;; ;; Load mode-specific config
-;; (require 'my-filetype-settings)
-;; (require 'my-yasnippet)
-;; (require 'my-ctags)
+;; File mode
 (require 'my-yaml-mode)
 (require 'my-rust-mode)
 (require 'my-web-mode)
