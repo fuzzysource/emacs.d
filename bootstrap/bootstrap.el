@@ -1,5 +1,4 @@
-;; Setup el-get, use-package, quelpa-use-package
-
+(add-to-list 'load-path "~/.emacs.d/bootstrap-deps")
 (setq package-archives
       '(
         ("melpa" . "https://melpa.org/packages/")
@@ -9,6 +8,10 @@
         ("gnu-mirror"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")
         ))
 (package-initialize)
+
+(require 'exec-path-from-shell)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -25,6 +28,10 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
+;; (use-package memoize
+;;   :straight (memoize :host github :repo "skeeto/emacs-memoize")
+;;   :init
+;;   (require 'memoize))
 
 
-(provide 'package-system)
+(provide 'bootstrap)

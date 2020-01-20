@@ -1,4 +1,7 @@
 (use-package pyvenv)
+(use-package elpy
+  :init
+  (elpy-enable))
 
 (use-package anaconda-mode)
 

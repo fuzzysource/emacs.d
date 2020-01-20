@@ -1,30 +1,44 @@
-(add-to-list 'load-path "~/.emacs.d/fuzzysource")
-(add-to-list 'load-path "~/.emacs.d/fuzzysource/filetypes")
-(add-to-list 'load-path "~/.emacs.d/github")
+;; (add-to-list 'load-path "~/.emacs.d/fuzzysource")
+
+(add-to-list 'load-path "~/.emacs.d/modes")
+(add-to-list 'load-path "~/.emacs.d/bootstrap")
+(add-to-list 'load-path "~/.emacs.d/layers")
+
+(require 'bootstrap)
 
 (add-to-list 'default-frame-alist
              '(font . "Source Code Pro-12"))
-(require 'package-system)
-(require 'exec-path-from-shell)
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
 
-(require 'my-treemacs)
-(require 'my-tab)
-(require 'my-appearance)
-(require 'my-edit-settings)
-(require 'my-projectile-mode)
-(require 'my-evil-mode)
-(require 'my-navigation-settings)
-(require 'my-auto-complete)
-(require 'my-emacs-lsp)
-(require 'my-eglot)
-(require 'my-dap)
+(require 'macros)
+(require 'base)
+(require 'appearance)
+(require 'windows)
+(require 'minibuffer)
+(require 'projectile)
+(require 'yasnippet)
+(require 'auto-completion)
+(require 'language-server)
+(require 'debug)
+(require 'evil)
+(require 'keybinding)
 
-;; Load mode-specific config
-(require 'my-filetype-settings)
-(require 'my-yasnippet)
-(require 'my-ctags)
+
+;; (require 'my-treemacs)
+;; (require 'my-tab)  :init
+;; (global-set-key (kbd "C-c C-g") #'projectile-ripgrep)
+;; (require 'my-edit-settings)
+;; (require 'my-projectile-mode)
+;; (require 'my-evil-mode)
+;; (require 'my-navigation-settings)
+;; (require 'my-auto-complete)
+;; (require 'my-emacs-lsp)
+;; (require 'my-eglot)
+;; (require 'my-dap)
+
+;; ;; Load mode-specific config
+;; (require 'my-filetype-settings)
+;; (require 'my-yasnippet)
+;; (require 'my-ctags)
 (require 'my-yaml-mode)
 (require 'my-rust-mode)
 (require 'my-web-mode)
@@ -40,12 +54,11 @@
 (require 'my-json-mode)
 (require 'my-clojure-mode)
 
-;; Tools
-(require 'my-toolings)
-(require 'my-keybindings)
+;; ;; Tools
+;; (require 'my-toolings)
 
 ;; Menus
-(require 'my-menu-bar)
+;; (require 'my-menu-bar)
 
 ;; Custom file
 (setq custom-file "~/.emacs-custom.el")

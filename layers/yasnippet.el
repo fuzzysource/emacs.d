@@ -3,6 +3,6 @@
 
 (setq yas-snippet-dirs
       (append yas-snippet-dirs
-              '("~/.emacs.d/fuzzysource/snippets")))
+              '("~/.emacs.d/snippets")))
 
-(provide 'my-yasnippet)
+(provide 'yasnippet)

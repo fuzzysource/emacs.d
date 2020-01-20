@@ -1,10 +1,3 @@
-;; File browsing and navigation
-;; (use-package ranger)
-(use-package counsel-etags
-  :config
-  (add-to-list 'counsel-etags-ignore-directories "__pycache__")
-  (add-to-list 'counsel-etags-ignore-filenames "*.pyc")
-  (add-to-list 'counsel-etags-ignore-filenames "*.json"))
 
 (use-package neotree
   :config
@@ -48,24 +41,7 @@
   )
 
 (use-package imenu-list)
-(use-package ivy
-  :init
-  (ivy-mode 1)
-  :config
-  (setq ivy-use-virtual-buffers t)
-  (setq ivy-count-format "(%d/%d) ")
-  (setq ivy-use-selectable-prompt t))
+(use-package buffer-move)
 
-(use-package ibuffer-sidebar
-  ;; :config
-  ;; (ibuffer-sidebar-toggle-sidebar)
-  ;; (setq ibuffer-sidebar-face `(:family "Source Sans Pro" :height 140))
-  )
 
-(use-package sr-speedbar)
-
-(use-package ace-window)
-
-(use-package avy)
-
-(provide 'my-navigation-settings)
+(provide 'windows)

@@ -1,1 +1,0 @@
-(provide 'my-multiple-cursors)

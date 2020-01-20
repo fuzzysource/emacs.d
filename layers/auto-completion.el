@@ -13,4 +13,4 @@
   :init
   (company-quickhelp-mode))
 
-(provide 'my-auto-complete)
+(provide 'auto-completion)
