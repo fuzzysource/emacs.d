@@ -16,7 +16,11 @@
   (define-key
     global-map
     [menu-bar dap-menu dab-disconnect]
-    '("Cancel current debug session" . dap-disconnect))
+    '("Cancel all debug sessions" . dap-delete-all-sessions))
+  (define-key
+    global-map
+    [menu-bar dap-menu dab-disconnect]
+    '("Cancel current debug session" . dap-delete-session))
   (define-key
     global-map
     [menu-bar dap-menu dab-step-out]

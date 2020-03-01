@@ -4,13 +4,14 @@
 
 (add-to-list 'default-frame-alist
              '(font . "Source Code Pro-12"))
+
 (require 'package-system)
 (require 'exec-path-from-shell)
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
 (require 'my-treemacs)
-(require 'my-tab)
+;; (require 'my-tab)
 (require 'my-appearance)
 (require 'my-edit-settings)
 (require 'my-projectile-mode)
