@@ -10,7 +10,6 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-(require 'my-treemacs)
 ;; (require 'my-tab)
 (require 'my-appearance)
 (require 'my-edit-settings)
@@ -18,6 +17,7 @@
 (require 'my-evil-mode)
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
+(require 'my-treemacs)
 (require 'my-emacs-lsp)
 (require 'my-eglot)
 (require 'my-dap)

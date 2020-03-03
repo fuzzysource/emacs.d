@@ -6,7 +6,9 @@
   ("<f6>" . dap-step-in)
   ("C-<f6>" . dap-step-out)
   ("C-<return>" . dap-breakpoint-toggle)
-  :hook ((dap-mode . setup-dap-menu)))
+  :hook (
+         (dap-mode . setup-dap-menu)
+         (dap-mode . dap-ui-mode)))
 
 (defun setup-dap-menu ()
   (define-key-after global-map

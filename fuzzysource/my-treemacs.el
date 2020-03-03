@@ -1,9 +1,11 @@
 (use-package treemacs
-  :straight (treemacs :host github :repo "Alexander-Miller/treemacs")
+  :straight (treemacs :type git :flavor melpa
+                      :files (:defaults "Changelog.org" "icons" "src/elisp/treemacs*.el" "src/scripts/treemacs*.py" (:exclude "src/extra/*") "treemacs-pkg.el")
+                      :host github :repo "Alexander-Miller/treemacs")
   :defer t
-  :init
-  (with-eval-after-load 'winum
-    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
+  ;; :init
+  ;; (with-eval-after-load 'winum
+  ;;   (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
   :config
   (progn
     (setq treemacs-collapse-dirs                 (if (executable-find "python3") 3 0)

@@ -1,9 +1,12 @@
 (use-package go-mode
-  :hook (go-mode . lsp-deferred)
+  :hook (
+         (go-mode . lsp-deferred)
+         )
   :config
   (setq indent-tabs-mode nil)
   (setq tab-width 4)
   (setq flycheck-checker 'go-gofmt)
+  (dap-mode)
   (require 'dap-go)
   (dap-go-setup))
 
