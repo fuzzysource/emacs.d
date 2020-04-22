@@ -1,5 +1,14 @@
 ;; (use-package spaceline)
 
+(use-package ivy-posframe
+  :straight (ivy-posframe :host github :repo "tumashu/ivy-posframe")
+  :init
+  (ivy-posframe-mode 1)
+  :config
+  (setq ivy-posframe-display-functions-alist
+        '((t . ivy-posframe-display-at-point)))
+  )
+
 (use-package doom-modeline
   :straight t
   :init
@@ -96,5 +105,8 @@
   (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol"))
 
 (add-to-list 'default-frame-alist '(font . "Fira Code-12"))
+
+;; Enable prettify-symbols-mode globally
+(global-prettify-symbols-mode)
 
 (provide 'my-appearance)

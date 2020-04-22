@@ -16,12 +16,18 @@
 (require 'dap-python)
 (defun my/python-mode-hook ()
   (electric-pair-mode)
-  (anaconda-mode)
-  (anaconda-eldoc-mode)
+  ;;(anaconda-mode)
+  ;;(anaconda-eldoc-mode)
   (add-projectile-project-root-to-PYTHONPATH)
-  (highlight-indent-guides-mode)
+  ;;(highlight-indent-guides-mode)
   (dap-mode 1)
   (dap-ui-mode 1))
+
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
+
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 

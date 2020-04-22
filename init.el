@@ -40,6 +40,7 @@
 (require 'my-typescript-mode)
 (require 'my-json-mode)
 (require 'my-clojure-mode)
+(require 'my-lua-mode)
 
 ;; Tools
 (require 'my-toolings)
@@ -51,3 +52,4 @@
 ;; Custom file
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
+(put 'upcase-region 'disabled nil)

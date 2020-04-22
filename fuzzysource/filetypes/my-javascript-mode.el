@@ -23,11 +23,11 @@
 ;;    :command '("chrome" "--headless" "--remote-debugging-port=9222")))
 
 
-(projectile-register-project-type 'webpack '("webpack.config.js")
-                                  :compile "npx webpack"
-                                  :run "npx webpack-dev-server"
-                                  :test "npm test"
-                                  :test-suffix ".test")
+;; (projectile-register-project-type 'webpack '("webpack.config.js")
+;;                                   :compile "npx webpack"
+;;                                   :run "npx webpack-dev-server"
+;;                                   :test "npm test"
+;;                                   :test-suffix ".test")
 
 
 (provide 'my-javascript-mode)

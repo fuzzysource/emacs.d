@@ -2,7 +2,8 @@
   :straight (lsp-mode :host github :repo "emacs-lsp/lsp-mode")
   :commands (lsp lsp-deferred)
   :config
-  (push 'company-lsp company-backends))
+  (push 'company-lsp company-backends)
+  (yas-minor-mode))
 
 ;; optionally
 (use-package lsp-ui
