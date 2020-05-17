@@ -104,7 +104,7 @@
   "Setup Fira Code Symbols"
   (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol"))
 
-(add-to-list 'default-frame-alist '(font . "Fira Code-12"))
+(add-to-list 'default-frame-alist '(font . "Cascadia Code-12"))
 
 ;; Enable prettify-symbols-mode globally
 (global-prettify-symbols-mode)

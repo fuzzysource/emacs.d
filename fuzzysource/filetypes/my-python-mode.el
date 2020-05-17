@@ -26,6 +26,9 @@
 (use-package elpy
   :ensure t
   :init
+  (setq python-shell-interpreter "python"
+        python-shell-interpreter-args "-i")
+
   (elpy-enable))
 
 

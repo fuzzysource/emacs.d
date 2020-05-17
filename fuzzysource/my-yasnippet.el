@@ -1,4 +1,6 @@
-(use-package yasnippet)
+(use-package yasnippet
+  :init (yas-global-mode))
+
 (use-package yasnippet-snippets)
 
 (setq yas-snippet-dirs
