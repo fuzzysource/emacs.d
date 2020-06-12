@@ -16,6 +16,9 @@
 (require 'dap-python)
 (defun my/python-mode-hook ()
   (electric-pair-mode)
+  (setq python-python-command "python3")
+  (setq python-shell-interpreter "python3")
+
   ;;(anaconda-mode)
   ;;(anaconda-eldoc-mode)
   (add-projectile-project-root-to-PYTHONPATH)
@@ -26,8 +29,9 @@
 (use-package elpy
   :ensure t
   :init
-  (setq python-shell-interpreter "python"
+  (setq python-shell-interpreter "python3"
         python-shell-interpreter-args "-i")
+  ;; (setq elpy-rpc-virtualenv-path 'current)
 
   (elpy-enable))
 

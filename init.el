@@ -41,6 +41,7 @@
 (require 'my-json-mode)
 (require 'my-clojure-mode)
 (require 'my-lua-mode)
+(require 'my-nginx)
 
 ;; Tools
 (require 'my-toolings)

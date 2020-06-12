@@ -1,14 +1,3 @@
-;; (use-package spaceline)
-
-;; (use-package ivy-posframe
-;;   :straight (ivy-posframe :host github :repo "tumashu/ivy-posframe")
-;;   :init
-;;   (ivy-posframe-mode 1)
-;;   :config
-;;   (setq ivy-posframe-display-functions-alist
-;;         '((t . ivy-posframe-display-at-point)))
-;;   )
-
 (use-package doom-modeline
   :straight t
   :init
@@ -24,6 +13,8 @@
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 
+(use-package grayscale-theme
+  :straight t)
 (use-package dracula-theme
   :straight t)
 
@@ -32,20 +23,13 @@
 
 (use-package golden-ratio
   :straight (golden-ratio :host github :repo "roman/golden-ratio.el"))
+
 (use-package all-the-icons
   :straight t)
 
-(load-theme 'material t)
+;; (load-theme 'doom-dracula t)
 
-(defun my/after-theme-loaded ()
-  (custom-set-faces
-   '(ivy-current-match
-     ((((class color) (background light))
-       :background "red" :foreground "white")
-      (((class color) (background dark))
-       :background "purple" :foreground "white")))))
-
-(my/after-theme-loaded)
+(load-theme 'grayscale t)
 
 (defun fira-code-mode--make-alist (list)
   "Generate prettify-symbols alist from LIST."
