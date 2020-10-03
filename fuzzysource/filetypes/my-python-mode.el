@@ -22,9 +22,13 @@
   ;;(anaconda-mode)
   ;;(anaconda-eldoc-mode)
   (add-projectile-project-root-to-PYTHONPATH)
-  ;;(highlight-indent-guides-mode)
+  (highlight-indent-guides-mode)
   (dap-mode 1)
-  (dap-ui-mode 1))
+  (dap-ui-mode 1)
+  (lsp-deferred)
+  )
+
+(add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
 
 (use-package elpy
   :ensure t
@@ -33,7 +37,8 @@
         python-shell-interpreter-args "-i")
   ;; (setq elpy-rpc-virtualenv-path 'current)
 
-  (elpy-enable))
+  ;; (elpy-enable)
+  )
 
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)

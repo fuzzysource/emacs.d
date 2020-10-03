@@ -3,7 +3,7 @@
   :commands (lsp lsp-deferred)
   :config
   (push 'company-lsp company-backends)
-  (yas-minor-mode))
+  )
 
 ;; optionally
 (use-package lsp-ui

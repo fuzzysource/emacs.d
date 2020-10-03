@@ -1,7 +1,9 @@
 (use-package buffer-move)
 (use-package format-all
   :straight (format-all :host github :repo "lassik/emacs-format-all-the-code")
-  :hook (before-save . format-all-buffer))
+  :bind ([f10] . format-all-buffer)
+  ;; :hook (before-save . format-all-buffer)
+  )
 
 (use-package origami
   :init
@@ -12,9 +14,9 @@
   (global-flycheck-mode))
 
 (use-package highlight-indent-guides
-  :config
+  :init
   (setq highlight-indent-guides-method 'character)
-  (setq highlight-indent-guides-character ?\|)
+  (setq highlight-indent-guides-character ?|)
   (setq highlight-indent-guides-responsive 'top))
 
 (use-package paredit)

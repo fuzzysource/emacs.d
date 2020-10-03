@@ -1,11 +1,16 @@
 
 (use-package dap-mode
+  :straight (dap-mode :host github :repo "emacs-lsp/dap-mode")
   :bind
   ("<f7>" . dap-next)
   ("C-<f7>" . dap-continue)
   ("<f6>" . dap-step-in)
   ("C-<f6>" . dap-step-out)
   ("C-<return>" . dap-breakpoint-toggle)
+  :init
+  ;; Enabling only some features
+  (setq dap-auto-configure-features '(sessions locals controls tooltip))
+
   :hook (
          (dap-mode . setup-dap-menu)
          (dap-mode . dap-ui-mode)))

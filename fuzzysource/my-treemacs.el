@@ -1,7 +1,5 @@
 (use-package treemacs
-  :straight (treemacs :type git :flavor melpa
-                      :files (:defaults "Changelog.org" "icons" "src/elisp/treemacs*.el" "src/scripts/treemacs*.py" (:exclude "src/extra/*") "treemacs-pkg.el")
-                      :host github :repo "Alexander-Miller/treemacs")
+  :straight (treemacs :host github :repo "Alexander-Miller/treemacs")
   :defer t
   ;; :init
   ;; (with-eval-after-load 'winum
