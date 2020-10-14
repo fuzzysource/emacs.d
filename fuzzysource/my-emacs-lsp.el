@@ -2,7 +2,7 @@
   :straight (lsp-mode :host github :repo "emacs-lsp/lsp-mode")
   :commands (lsp lsp-deferred)
   :config
-  (push 'company-lsp company-backends)
+  (push 'company-capf company-backends)
   )
 
 ;; optionally
@@ -19,11 +19,6 @@
     #'lsp-ui-peek-find-definitions)
   (define-key lsp-ui-mode-map [remap xref-find-references]
     #'lsp-ui-peek-find-references))
-
-(use-package company-lsp
-  :straight (company-lsp :host github :repo "tigersoldier/company-lsp")
-  :commands company-lsp
-  )
 
 (use-package lsp-treemacs
   :straight (lsp-treemacs :host github :repo "emacs-lsp/lsp-treemacs")

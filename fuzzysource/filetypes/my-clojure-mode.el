@@ -7,4 +7,6 @@
   ((clojure-mode . paredit-mode)
    (clojure-mode . rainbow-delimiters-mode)))
 
+(use-package cider)
+
 (provide 'my-clojure-mode)
