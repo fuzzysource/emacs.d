@@ -10,7 +10,7 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-;; (require 'my-tab)
+(require 'my-tab)
 (require 'my-appearance)
 (require 'my-edit-settings)
 (require 'my-projectile-mode)
