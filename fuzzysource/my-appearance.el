@@ -92,9 +92,11 @@
   "Setup Fira Code Symbols"
   (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol"))
 
-(add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
+;; (add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
+(add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
+
 
 ;; Enable prettify-symbols-mode globally
-(global-prettify-symbols-mode)
+;; (global-prettify-symbols-mode)
 
 (provide 'my-appearance)
