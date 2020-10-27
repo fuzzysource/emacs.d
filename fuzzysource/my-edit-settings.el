@@ -1,8 +1,15 @@
 (use-package buffer-move)
+
+(defun format-buffer ()
+  (interactive)
+  (unless (seq-contains-p '() major-mode)
+    (delete-trailing-whitespace)
+    (format-all-buffer)))
+
 (use-package format-all
   :straight (format-all :host github :repo "lassik/emacs-format-all-the-code")
   :bind ([f10] . format-all-buffer)
-  ;; :hook (before-save . format-all-buffer)
+  :hook (before-save . format-buffer)
   )
 
 (use-package origami
