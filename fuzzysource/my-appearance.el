@@ -31,9 +31,11 @@
 
 ;; (load-theme 'grayscale t)
 
-(load-theme 'doom-challenger-deep t)
+;; (load-theme 'doom-challenger-deep t)
 
-;; (load-theme 'doom-acario-dark t)
+;; (load-theme 'doom-acario-light t)
+
+(load-theme 'doom-dark+ t)
 
 (defun fira-code-mode--make-alist (list)
   "Generate prettify-symbols alist from LIST."
