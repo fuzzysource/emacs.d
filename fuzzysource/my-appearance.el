@@ -27,6 +27,9 @@
 (use-package all-the-icons
   :straight t)
 
+(use-package nord-theme
+  :straight t)
+
 ;; (load-theme 'doom-dracula t)
 
 ;; (load-theme 'grayscale t)
@@ -35,7 +38,7 @@
 
 ;; (load-theme 'doom-acario-light t)
 
-(load-theme 'doom-dark+ t)
+(load-theme 'nord t)
 
 (defun fira-code-mode--make-alist (list)
   "Generate prettify-symbols alist from LIST."
