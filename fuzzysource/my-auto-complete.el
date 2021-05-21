@@ -10,7 +10,10 @@
   (
    ("C-<return>" . company-complete)
    ("C-<SPC>" . company-files)
-   ))
+   )
+  :config
+  (setq company-dabbrev-downcase nil)
+  )
 
 (use-package company-quickhelp
   :init
