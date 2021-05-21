@@ -7,10 +7,13 @@
   (setq company-minimum-prefix-length 1)
   (setq company-tooltip-flip-when-above nil)
   :bind
-  ("C-<RET>" . company-complete))
+  (
+   ("C-<return>" . company-complete)
+   ("C-<SPC>" . company-files)
+   ))
 
 (use-package company-quickhelp
   :init
-  (company-quickhelp-mode))
+  (add-hook 'global-company-mode-hook #'company-quickhelp-mode))
 
 (provide 'my-auto-complete)

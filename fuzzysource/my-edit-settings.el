@@ -73,4 +73,5 @@
 ;; disable the annoying bell ring
 (setq ring-bell-function 'ignore)
 
+
 (provide 'my-edit-settings)
