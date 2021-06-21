@@ -30,7 +30,7 @@
 (use-package nord-theme
   :straight t)
 
-(load-theme 'doom-dracula t)
+(load-theme 'doom-wilmersdorf t)
 
 ;; (load-theme 'grayscale t)
 
