@@ -21,3 +21,5 @@ transient
 straight
 .extension
 elpy
+url
+*.cache
