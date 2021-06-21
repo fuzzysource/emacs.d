@@ -6,7 +6,7 @@
   ("C-<f7>" . dap-continue)
   ("<f6>" . dap-step-in)
   ("C-<f6>" . dap-step-out)
-  ("C-<return>" . dap-breakpoint-toggle)
+  ;; ("C-<return>" . dap-breakpoint-toggle)
   :init
   ;; Enabling only some features
   (setq dap-auto-configure-features '(sessions locals controls tooltip))

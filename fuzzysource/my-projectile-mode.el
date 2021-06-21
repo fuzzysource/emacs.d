@@ -1,4 +1,6 @@
 ;; Projectile
+(use-package project)
+
 (use-package projectile
   :init
   (projectile-global-mode)

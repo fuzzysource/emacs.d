@@ -42,7 +42,7 @@
 (require 'my-clojure-mode)
 (require 'my-lua-mode)
 (require 'my-nginx)
-
+(require 'protobuf-mode)
 ;; Tools
 (require 'my-toolings)
 (require 'my-keybindings)
