@@ -98,8 +98,8 @@
   (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol"))
 
 ;; (add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
-(add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
-
+;; (add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
+(add-to-list 'default-frame-alist '(font . "Fanstasque Sans Mono"))
 
 ;; Enable prettify-symbols-mode globally
 ;; (global-prettify-symbols-mode)
