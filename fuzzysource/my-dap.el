@@ -1,6 +1,6 @@
 
 (use-package dap-mode
-  :straight (dap-mode :host github :repo "emacs-lsp/dap-mode")
+  ;; :straight (dap-mode :host github :repo "emacs-lsp/dap-mode")
   :bind
   ("<f7>" . dap-next)
   ("C-<f7>" . dap-continue)

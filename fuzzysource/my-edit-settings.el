@@ -28,7 +28,9 @@
 
 (use-package paredit)
 
-(use-package magit)
+(use-package magit
+  :commands (magit-status)
+  :bind ([f4] . magit-status))
 
 (use-package whitespace
   :init

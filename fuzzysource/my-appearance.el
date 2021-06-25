@@ -99,7 +99,7 @@
 
 ;; (add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
 ;; (add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
-(add-to-list 'default-frame-alist '(font . "Fanstasque Sans Mono"))
+(add-to-list 'default-frame-alist '(font . "Fantasque Sans Mono-13"))
 
 ;; Enable prettify-symbols-mode globally
 ;; (global-prettify-symbols-mode)
