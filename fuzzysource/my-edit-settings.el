@@ -9,7 +9,8 @@
 (use-package format-all
   :straight (format-all :host github :repo "lassik/emacs-format-all-the-code")
   :bind ([f10] . format-all-buffer)
-  :hook (before-save . format-buffer)
+  :init (add-hook 'prog-mode-hook 'format-all-mode)
+  (add-hook 'format-all-mode-hook 'format-all-ensure-formatter)
   )
 
 (use-package origami
@@ -75,5 +76,21 @@
 ;; disable the annoying bell ring
 (setq ring-bell-function 'ignore)
 
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(auto-save-default t)
+;;  '(auto-save-interval 1)
+;;  '(auto-save-timeout 1))
+
+;; (setq auto-save-visited-file-name t)
+
+(use-package ivy-posframe
+  :init
+  (ivy-posframe-mode 1)
+  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center)))
+  )
 
 (provide 'my-edit-settings)

@@ -1,9 +1,9 @@
+
 (use-package lsp-mode
   :straight (lsp-mode :host github :repo "emacs-lsp/lsp-mode")
   :commands (lsp lsp-deferred)
-  :config
-  (push 'company-capf company-backends)
   )
+
 
 ;; optionally
 (use-package lsp-ui

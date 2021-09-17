@@ -1,12 +1,12 @@
 (use-package pyvenv)
 
-(use-package anaconda-mode)
+;; (use-package anaconda-mode)
 
-(use-package company-anaconda
-  :config
-  (eval-after-load "company"
-    '(add-to-list 'company-backends
-                  '(company-anaconda :with company-capf))))
+;; (use-package company-anaconda
+;;   :config
+;;   (eval-after-load "company"
+;;     '(add-to-list 'company-backends
+;;                   '(company-anaconda :with company-capf))))
 
 (defun add-projectile-project-root-to-PYTHONPATH ()
   "Add current project root to the PYTHONPATH."
