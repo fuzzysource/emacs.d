@@ -11,7 +11,7 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-(require 'my-tab)
+;; (require 'my-tab)
 (require 'my-appearance)
 (require 'my-edit-settings)
 (require 'my-projectile-mode)
@@ -19,10 +19,10 @@
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
 (require 'my-treemacs)
-(require 'my-emacs-lsp)
+;; (require 'my-emacs-lsp)
 (require 'my-eglot)
 (require 'my-dap)
-
+(require 'buffer-move)
 ;; Load mode-specific config
 (require 'my-filetype-settings)
 (require 'my-yasnippet)
@@ -44,6 +44,10 @@
 (require 'my-lua-mode)
 (require 'my-nginx)
 (require 'protobuf-mode)
+(require 'my-flutter)
+(require 'clang-mode)
+(require 'my-term-mode)
+
 ;; Tools
 (require 'my-toolings)
 (require 'my-keybindings)

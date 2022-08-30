@@ -1,4 +1,7 @@
-(use-package buffer-move)
+;; (use-package buffer-move)
+(use-package undo-tree
+  :straight (undo-tree :host github :repo "apchamberlain/undo-tree.el")
+  :init (global-undo-tree-mode))
 
 (defun format-buffer ()
   (interactive)
@@ -87,10 +90,10 @@
 
 ;; (setq auto-save-visited-file-name t)
 
-(use-package ivy-posframe
-  :init
-  (ivy-posframe-mode 1)
-  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center)))
-  )
+;; (use-package ivy-posframe
+;;   :init
+;;   (ivy-posframe-mode 1)
+;;   (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center)))
+;;   )
 
 (provide 'my-edit-settings)

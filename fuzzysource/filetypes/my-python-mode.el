@@ -1,23 +1,19 @@
 (use-package pyvenv)
 
-;; (use-package anaconda-mode)
-
-;; (use-package company-anaconda
-;;   :config
-;;   (eval-after-load "company"
-;;     '(add-to-list 'company-backends
-;;                   '(company-anaconda :with company-capf))))
-
 (defun add-projectile-project-root-to-PYTHONPATH ()
   "Add current project root to the PYTHONPATH."
   (add-to-list 'python-shell-extra-pythonpaths
                (projectile-project-root)))
 
-(require 'dap-python)
+(use-package lsp-pyright
+  :ensure t
+  )
+
 (defun my/python-mode-hook ()
+  (require 'dap-python)
   (electric-pair-mode)
-  (setq python-python-command "python3")
-  (setq python-shell-interpreter "python3")
+  (setq python-python-command "python")
+  (setq python-shell-interpreter "python")
 
   ;;(anaconda-mode)
   ;;(anaconda-eldoc-mode)
@@ -25,23 +21,22 @@
   (highlight-indent-guides-mode)
   (dap-mode 1)
   (dap-ui-mode 1)
+  (require 'lsp-pyright)
+  (add-to-list 'lsp-enabled-clients 'pyright)
   (lsp-deferred)
+  ;; (eglot-ensure)
   )
 
-;; (add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
-
-;; (use-package elpy
-;;   :ensure t
-;;   :init
-;;   (setq python-shell-interpreter "python3"
-;;         python-shell-interpreter-args "-i")
-;;   ;; (setq elpy-rpc-virtualenv-path 'current)
-
-;;   ;; (elpy-enable)
-;;   )
-
-
 (add-hook 'python-mode-hook 'my/python-mode-hook)
+
+
+(use-package pipenv
+  :straight t
+  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended))
 
 ;; (dap-register-debug-template
 ;;  "Python :: Debug with all tests"
@@ -76,12 +71,5 @@
 ;;              (concat "PYTHONPATH=" (projectile-project-root) " python3")
 ;;            "python3"))
 ;;   )
-
-(projectile-register-project-type
- 'tox-project '("tox.ini")
- :compile  "tox -e build"
- :test "tox -e pytest"
- :run "tox -e run"
- :test-prefix "test_")
 
 (provide 'my-python-mode)

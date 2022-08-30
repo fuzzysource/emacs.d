@@ -30,7 +30,7 @@
 (use-package nord-theme
   :straight t)
 
-(load-theme 'doom-wilmersdorf t)
+;; (load-theme 'doom-wilmersdorf t)
 
 ;; (load-theme 'grayscale t)
 
@@ -40,66 +40,40 @@
 
 ;; (load-theme 'nord t)
 
-(defun fira-code-mode--make-alist (list)
-  "Generate prettify-symbols alist from LIST."
-  (let ((idx -1))
-    (mapcar
-     (lambda (s)
-       (setq idx (1+ idx))
-       (let* ((code (+ #Xe100 idx))
-              (width (string-width s))
-              (prefix ())
-              (suffix '(?\s (Br . Br)))
-              (n 1))
-         (while (< n width)
-           (setq prefix (append prefix '(?\s (Br . Bl))))
-           (setq n (1+ n)))
-         (cons s (append prefix suffix (list (decode-char 'ucs code))))))
-     list)))
+;; (load-theme 'doom-dracula t)
 
-(defconst fira-code-mode--ligatures
-  '("www" "**" "***" "**/" "*>" "*/" "\\\\" "\\\\\\"
-    "{-" "[]" "::" ":::" ":=" "!!" "!=" "!==" "-}"
-    "--" "---" "-->" "->" "->>" "-<" "-<<" "-~"
-    "#{" "#[" "##" "###" "####" "#(" "#?" "#_" "#_("
-    ".-" ".=" ".." "..<" "..." "?=" "??" ";;" "/*"
-    "/**" "/=" "/==" "/>" "//" "///" "&&" "||" "||="
-    "|=" "|>" "^=" "$>" "++" "+++" "+>" "=:=" "=="
-    "===" "==>" "=>" "=>>" "<=" "=<<" "=/=" ">-" ">="
-    ">=>" ">>" ">>-" ">>=" ">>>" "<*" "<*>" "<|" "<|>"
-    "<$" "<$>" "<!--" "<-" "<--" "<->" "<+" "<+>" "<="
-    "<==" "<=>" "<=<" "<>" "<<" "<<-" "<<=" "<<<" "<~"
-    "<~~" "</" "</>" "~@" "~-" "~=" "~>" "~~" "~~>" "%%"
-    "x" ":" "+" "+" "*"))
+(load-theme 'material t)
 
-(defvar fira-code-mode--old-prettify-alist)
-
-(defun fira-code-mode--enable ()
-  "Enable Fira Code ligatures in current buffer."
-  (setq-local fira-code-mode--old-prettify-alist prettify-symbols-alist)
-  (setq-local prettify-symbols-alist (append (fira-code-mode--make-alist fira-code-mode--ligatures) fira-code-mode--old-prettify-alist))
-  (prettify-symbols-mode t))
-
-(defun fira-code-mode--disable ()
-  "Disable Fira Code ligatures in current buffer."
-  (setq-local prettify-symbols-alist fira-code-mode--old-prettify-alist)
-  (prettify-symbols-mode -1))
-
-(define-minor-mode fira-code-mode
-  "Fira Code ligatures minor mode"
-  :lighter " Fira Code"
-  (setq-local prettify-symbols-unprettify-at-point 'right-edge)
-  (if fira-code-mode
-      (fira-code-mode--enable)
-    (fira-code-mode--disable)))
-
-(defun fira-code-mode--setup ()
-  "Setup Fira Code Symbols"
-  (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol"))
+(use-package ligature
+  :straight (ligature :host github :repo "mickeynp/ligature.el")
+  :config
+  ;; Enable the "www" ligature in every possible major mode
+  (ligature-set-ligatures 't '("www"))
+  ;; Enable traditional ligature support in eww-mode, if the
+  ;; `variable-pitch' face supports it
+  (ligature-set-ligatures 'eww-mode '("ff" "fi" "ffi"))
+  ;; Enable all Cascadia Code ligatures in programming modes
+  (ligature-set-ligatures 'prog-mode '("|||>" "<|||" "<==>" "<!--" "####" "~~>" "***" "||=" "||>"
+                                       ":::" "::=" "=:=" "===" "==>" "=!=" "=>>" "=<<" "=/=" "!=="
+                                       "!!." ">=>" ">>=" ">>>" ">>-" ">->" "->>" "-->" "---" "-<<"
+                                       "<~~" "<~>" "<*>" "<||" "<|>" "<$>" "<==" "<=>" "<=<" "<->"
+                                       "<--" "<-<" "<<=" "<<-" "<<<" "<+>" "</>" "###" "#_(" "..<"
+                                       "..." "+++" "/==" "///" "_|_" "www" "&&" "^=" "~~" "~@" "~="
+                                       "~>" "~-" "**" "*>" "*/" "||" "|}" "|]" "|=" "|>" "|-" "{|"
+                                       "[|" "]#" "::" ":=" ":>" ":<" "$>" "==" "=>" "!=" "!!" ">:"
+                                       ">=" ">>" ">-" "-~" "-|" "->" "--" "-<" "<~" "<*" "<|" "<:"
+                                       "<$" "<=" "<>" "<-" "<<" "<+" "</" "#{" "#[" "#:" "#=" "#!"
+                                       "##" "#(" "#?" "#_" "%%" ".=" ".-" ".." ".?" "+>" "++" "?:"
+                                       "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
+                                       "\\\\" "://"))
+  ;; Enables ligature checks globally in all buffers. You can also do it
+  ;; per mode with `ligature-mode'.
+  (global-ligature-mode t))
 
 ;; (add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
-;; (add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
-(add-to-list 'default-frame-alist '(font . "Fantasque Sans Mono-13"))
+(add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
+;; (add-to-list 'default-frame-alist '(font . "Fantasque Sans Mono-13"))
+
 
 ;; Enable prettify-symbols-mode globally
 ;; (global-prettify-symbols-mode)
