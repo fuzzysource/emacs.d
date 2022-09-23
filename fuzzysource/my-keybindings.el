@@ -75,10 +75,10 @@
 ;; option for meta
 ;; control for super
 
-(when (eq system-type 'darwin)
-  (setq mac-option-modifier 'meta)
-  (setq mac-command-modifier 'control)
-  (setq mac-control-modifier 'super))
+;; (when (eq system-type 'darwin)
+;;   (setq mac-option-modifier 'meta)
+;;   (setq mac-command-modifier 'control)
+;;   (setq mac-control-modifier 'super))
 
 ;; key binding for avy
 
