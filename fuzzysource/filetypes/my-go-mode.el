@@ -8,7 +8,8 @@
   (setq flycheck-checker 'go-gofmt)
   (dap-mode)
   (require 'dap-go)
-  (dap-go-setup))
+  (dap-go-setup)
+  (add-to-list 'lsp-enabled-clients 'gopls))
 
 (use-package go-add-tags
   :straight (go-add-tags :host github :repo "syohex/emacs-go-add-tags"))

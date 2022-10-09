@@ -47,6 +47,7 @@
 (require 'my-flutter)
 (require 'clang-mode)
 (require 'my-term-mode)
+(require 'my-vue-mode)
 
 ;; Tools
 (require 'my-toolings)

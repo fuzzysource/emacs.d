@@ -71,9 +71,9 @@
   (global-ligature-mode t))
 
 ;; (add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
-(add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
+;; (add-to-list 'default-frame-alist '(font . "Victor Mono-13"))
 ;; (add-to-list 'default-frame-alist '(font . "Fantasque Sans Mono-13"))
-
+(add-to-list 'default-frame-alist '(font . "Iosevka-14"))
 
 ;; Enable prettify-symbols-mode globally
 ;; (global-prettify-symbols-mode)
