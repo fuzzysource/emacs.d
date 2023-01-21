@@ -4,6 +4,7 @@
 
 (add-to-list 'default-frame-alist
              '(font . "Source Code Pro-12"))
+(setq exec-path (append exec-path '(".nvm/versions/node/v16.15.1/bin")))
 
 (require 'package-system)
 (require 'exec-path-from-shell)
@@ -19,9 +20,9 @@
 (require 'my-navigation-settings)
 (require 'my-auto-complete)
 (require 'my-treemacs)
-;; (require 'my-emacs-lsp)
 (require 'my-eglot)
-(require 'my-dap)
+(require 'my-emacs-lsp)
+;; (require 'my-dap)
 (require 'buffer-move)
 ;; Load mode-specific config
 (require 'my-filetype-settings)
@@ -48,7 +49,8 @@
 (require 'clang-mode)
 (require 'my-term-mode)
 (require 'my-vue-mode)
-
+(require 'my-jupyter)
+(require 'my-org-mode)
 ;; Tools
 (require 'my-toolings)
 (require 'my-keybindings)

@@ -15,6 +15,7 @@
 
 (use-package grayscale-theme
   :straight t)
+
 (use-package dracula-theme
   :straight t)
 
@@ -32,7 +33,7 @@
 
 ;; (load-theme 'doom-wilmersdorf t)
 
-;; (load-theme 'grayscale t)
+(load-theme 'grayscale t)
 
 ;; (load-theme 'doom-challenger-deep t)
 
@@ -42,7 +43,7 @@
 
 ;; (load-theme 'doom-dracula t)
 
-(load-theme 'material t)
+;; (load-theme 'material t)
 
 (use-package ligature
   :straight (ligature :host github :repo "mickeynp/ligature.el")
