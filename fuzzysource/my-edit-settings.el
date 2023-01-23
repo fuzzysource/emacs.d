@@ -12,7 +12,8 @@
 (use-package format-all
   :straight (format-all :host github :repo "lassik/emacs-format-all-the-code")
   :bind ([f10] . format-all-buffer)
-  :init (add-hook 'prog-mode-hook 'format-all-mode)
+  :init
+  ;; (add-hook 'prog-mode-hook 'format-all-mode)
   (add-hook 'format-all-mode-hook 'format-all-ensure-formatter)
   )
 
@@ -95,5 +96,28 @@
 ;;   (ivy-posframe-mode 1)
 ;;   (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center)))
 ;;   )
+
+(use-package real-auto-save
+  :straight (read-auto-save :host github :repo "chillaranand/real-auto-save")
+  :init
+  (add-hook 'prog-mode-hook 'real-auto-save-mode)
+  :config
+  (setq real-auto-save-interval 3))
+
+(setq-default cursor-type 'bar)
+
+(use-package ace-jump-mode
+  :commands (
+             ace-jump-mode-pop-mark
+             ace-jump-mode
+             ace-jump-char-mode
+             ace-jump-line-mode
+             )
+  :config
+  (ace-jump-mode-enable-mark-sync)
+  :bind
+  (("C-x SPC" . 'ace-jump-mode-pop-mark)
+   ("C-c SPC" . 'ace-jump-mode )
+   ))
 
 (provide 'my-edit-settings)

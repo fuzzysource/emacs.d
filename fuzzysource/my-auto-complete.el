@@ -23,4 +23,7 @@
   :init
   (add-hook 'global-company-mode-hook #'company-quickhelp-mode))
 
+;; (use-package company-tabnine :ensure t
+;;   :init (add-to-list 'company-backends #'company-tabnine))
+
 (provide 'my-auto-complete)

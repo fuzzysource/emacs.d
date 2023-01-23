@@ -1,4 +1,5 @@
 (use-package go-mode
+  :init
   :hook (
          (go-mode . lsp-deferred)
          )
@@ -9,8 +10,10 @@
   (dap-mode)
   (require 'dap-go)
   (dap-go-setup)
-  (add-to-list 'lsp-enabled-clients 'gopls))
-
+  (add-to-list 'lsp-enabled-clients 'gopls)
+  (add-to-list 'lsp-enabled-clients 'gopls-remote)
+  (lsp-deferred)
+  )
 
 (use-package go-add-tags
   :straight (go-add-tags :host github :repo "syohex/emacs-go-add-tags"))

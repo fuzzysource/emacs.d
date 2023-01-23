@@ -6,7 +6,7 @@
                (projectile-project-root)))
 
 (use-package lsp-pyright
-  :ensure t
+  :straight t
   )
 
 (defun my/python-mode-hook ()

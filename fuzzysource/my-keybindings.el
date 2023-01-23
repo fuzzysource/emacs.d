@@ -14,7 +14,7 @@
 (global-set-key (kbd "C-x /") 'comment-or-uncomment-region)
 (global-set-key (kbd "<f11>") 'linum-mode)
 
-(define-key evil-normal-state-map ";" 'comment-line)
+;; (define-key evil-normal-state-map ";" 'comment-line)
 
 ;; neotree
 ;; (global-set-key (kbd "<f8>") 'toggle-neotree-sidebar)
@@ -75,10 +75,10 @@
 ;; option for meta
 ;; control for super
 
-(when (eq system-type 'darwin)
-  (setq mac-option-modifier 'meta)
-  (setq mac-command-modifier 'control)
-  (setq mac-control-modifier 'super))
+;; (when (eq system-type 'darwin)
+;;   (setq mac-option-modifier 'meta)
+;;   (setq mac-command-modifier 'control)
+;;   (setq mac-control-modifier 'super))
 
 ;; key binding for avy
 
