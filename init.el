@@ -46,6 +46,7 @@
 (require 'protobuf-mode)
 (require 'my-flutter)
 (require 'clang-mode)
+(require 'my-vue-mode)
 (require 'my-term-mode)
 
 ;; Tools

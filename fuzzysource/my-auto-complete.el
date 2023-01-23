@@ -12,7 +12,11 @@
    ("C-<SPC>" . company-files)
    )
   :config
-  (setq company-dabbrev-downcase nil)
+  (setq company-dabbrev-downcase nil))
+
+(use-package company-tabnine :ensure t
+  ;; :init
+  ;; (add-to-list 'company-backends #'company-tabnine)
   )
 
 (use-package company-quickhelp

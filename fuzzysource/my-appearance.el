@@ -32,7 +32,7 @@
 
 ;; (load-theme 'doom-wilmersdorf t)
 
-;; (load-theme 'grayscale t)
+(load-theme 'grayscale t)
 
 ;; (load-theme 'doom-challenger-deep t)
 
@@ -42,7 +42,7 @@
 
 ;; (load-theme 'doom-dracula t)
 
-(load-theme 'material t)
+;; (load-theme 'material t)
 
 (use-package ligature
   :straight (ligature :host github :repo "mickeynp/ligature.el")
@@ -71,9 +71,10 @@
   (global-ligature-mode t))
 
 ;; (add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
-(add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
+;; (add-to-list 'default-frame-alist '(font . "Victor Mono-12"))
 ;; (add-to-list 'default-frame-alist '(font . "Fantasque Sans Mono-13"))
 
+(add-to-list 'default-frame-alist '(font . "Iosevka-12"))
 
 ;; Enable prettify-symbols-mode globally
 ;; (global-prettify-symbols-mode)
