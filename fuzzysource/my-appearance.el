@@ -1,7 +1,12 @@
-(use-package doom-modeline
-  :straight t
+;; (use-package doom-modeline
+;;   :straight t
+;;   :init
+;;   (doom-modeline-mode 1))
+(use-package smart-mode-line
   :init
-  (doom-modeline-mode 1))
+  (setq sml/theme 'respectful)
+  (setq sml/no-confirm-load-theme t)  
+  (sml/setup))
 
 (use-package sublime-themes
   :straight t)
