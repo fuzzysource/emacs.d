@@ -3,12 +3,16 @@
   :straight (lsp-mode :host github :repo "emacs-lsp/lsp-mode")
   :commands (lsp lsp-deferred)
   :config
+  (dolist (m '(clojure-mode
+               clojurec-mode
+               clojurescript-mode
+               clojurex-mode))
+    (add-to-list 'lsp-language-id-configuration `(,m . "clojure")))
   (lsp-register-client
    (make-lsp-client :new-connection (lsp-tramp-connection "gopls")
                     :major-modes '(go-mode)
                     :remote? t
-                    :server-id 'gopls-remote))
-  )
+                    :server-id 'gopls-remote)))
 
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 

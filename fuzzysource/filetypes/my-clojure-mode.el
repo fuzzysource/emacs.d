@@ -4,9 +4,12 @@
 
 (use-package clojure-mode
   :straight (clojure-mode :host github :repo "clojure-emacs/clojure-mode")
-  :hook
-  ((clojure-mode . paredit-mode)
-   (clojure-mode . rainbow-delimiters-mode)))
+  :hook ((clojure-mode . lsp)
+         (clojurec-mode . lsp)
+         (clojurescript-mode . lsp))
+  :config
+  (add-to-list 'lsp-enabled-clients 'clojure-lsp)
+  )
 
 (use-package cider)
 (provide 'my-clojure-mode)

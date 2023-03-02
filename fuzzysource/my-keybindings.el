@@ -82,8 +82,8 @@
 
 ;; key binding for avy
 
-(global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
-(global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "C-c j") 'avy-goto-char)
+(global-set-key (kbd "C-c l") 'avy-goto-line)
 (global-set-key (kbd "s-w") 'ace-window)
 
 ;; python-mode
