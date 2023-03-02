@@ -38,11 +38,11 @@
 
 ;; (load-theme 'doom-wilmersdorf t)
 
-(load-theme 'grayscale t)
+;; (load-theme 'grayscale t)
 
 ;; (load-theme 'doom-challenger-deep t)
 
-;; (load-theme 'doom-acario-light t)
+(load-theme 'doom-acario-light t)
 
 ;; (load-theme 'nord t)
 
