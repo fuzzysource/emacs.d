@@ -25,5 +25,15 @@
 
 ;; (use-package company-tabnine :ensure t
 ;;   :init (add-to-list 'company-backends #'company-tabnine))
+(use-package copilot
+  :straight (:host github :repo "zerolfx/copilot.el" :files ("dist" "*.el"))
+  :ensure t
+  :config
+  (with-eval-after-load 'company
+    ;; disable inline previews
+    (delq 'company-preview-if-just-one-frontend company-frontends))
 
+  (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
+  (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion))
+;; you can utilize :map :hook and :config to customize copilot
 (provide 'my-auto-complete)

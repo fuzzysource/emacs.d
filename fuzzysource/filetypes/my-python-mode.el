@@ -9,6 +9,8 @@
   :straight t
   )
 
+(use-package py-isort)
+
 (defun my/python-mode-hook ()
   (require 'dap-python)
   (electric-pair-mode)
