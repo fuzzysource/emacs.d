@@ -84,7 +84,7 @@
 
 (global-set-key (kbd "C-c j") 'avy-goto-char)
 (global-set-key (kbd "C-c l") 'avy-goto-line)
-(global-set-key (kbd "s-w") 'ace-window)
+(global-set-key (kbd "C-c w") 'ace-window)
 
 ;; python-mode
 (defun my/anaconda-mode-keybindings ()
@@ -95,7 +95,7 @@
 ;; ibuffer keybindings
 (define-key ibuffer-name-map (kbd "<mouse-1>") 'ibuffer-mouse-visit-buffer)
 (define-key ibuffer-name-map (kbd "<mouse-2>") 'ibuffer-mouse-toggle-mark)
-
+(global-set-key (kbd "<f3>") 'ibuffer-sidebar-toggle-sidebar)
 
 
 ;; multiple-cursors - my-common-settings.el
@@ -118,7 +118,7 @@
 
 (global-set-key (kbd "<f5>") 'revert-buffer)
 (global-set-key (kbd "<f12>") 'golden-ratio)
-(global-set-key (kbd "<f3>") 'switch-to-buffer)
+;; (global-set-key (kbd "<f3>") 'switch-to-buffer)
 
 
 
