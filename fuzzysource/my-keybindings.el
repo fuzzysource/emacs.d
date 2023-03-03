@@ -82,7 +82,7 @@
 
 ;; key binding for avy
 
-(global-set-key (kbd "C-c j") 'avy-goto-char)
+(global-set-key (kbd "C-c c") 'avy-goto-char)
 (global-set-key (kbd "C-c l") 'avy-goto-line)
 (global-set-key (kbd "C-c w") 'ace-window)
 
@@ -95,8 +95,8 @@
 ;; ibuffer keybindings
 (define-key ibuffer-name-map (kbd "<mouse-1>") 'ibuffer-mouse-visit-buffer)
 (define-key ibuffer-name-map (kbd "<mouse-2>") 'ibuffer-mouse-toggle-mark)
-(global-set-key (kbd "<f3>") 'ibuffer-sidebar-toggle-sidebar)
-
+(global-set-key (kbd "S-<f3>") 'ibuffer-sidebar-toggle-sidebar)
+(global-set-key (kbd "<f3>") 'switch-to-buffer)
 
 ;; multiple-cursors - my-common-settings.el
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-beginnings-of-lines)
