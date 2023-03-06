@@ -1,3 +1,4 @@
+(xterm-mouse-mode 1)
 ;; (use-package buffer-move)
 (use-package undo-tree
   :straight (undo-tree :host github :repo "apchamberlain/undo-tree.el")
