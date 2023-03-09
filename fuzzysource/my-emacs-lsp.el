@@ -12,7 +12,13 @@
    (make-lsp-client :new-connection (lsp-tramp-connection "gopls")
                     :major-modes '(go-mode)
                     :remote? t
-                    :server-id 'gopls-remote)))
+                    :server-id 'gopls-remote))
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-tramp-connection "clojure-lsp")
+                    :major-modes '(clojure-mode)
+                    :remote? t
+                    :server-id 'clojure-lsp-remote))
+  )
 
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 

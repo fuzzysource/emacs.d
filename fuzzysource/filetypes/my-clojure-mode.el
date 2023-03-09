@@ -9,6 +9,7 @@
          (clojurescript-mode . lsp))
   :config
   (add-to-list 'lsp-enabled-clients 'clojure-lsp)
+  (add-to-list 'lsp-enabled-clients 'clojure-lsp-remote)
   )
 
 (use-package cider)
