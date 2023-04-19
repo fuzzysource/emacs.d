@@ -1,6 +1,5 @@
 
 (use-package lsp-mode
-  :straight (lsp-mode :host github :repo "emacs-lsp/lsp-mode")
   :commands (lsp lsp-deferred)
   :config
   (dolist (m '(clojure-mode
@@ -18,6 +17,13 @@
                     :major-modes '(clojure-mode)
                     :remote? t
                     :server-id 'clojure-lsp-remote))
+
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection "typescript-language-server --stdio")
+                    :major-modes '(rjsx-mode)
+                    :server-id 'jsts-ls))
+
+
   )
 
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)

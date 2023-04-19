@@ -100,12 +100,12 @@
 ;;   (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center)))
 ;;   )
 
-(use-package real-auto-save
-  :straight (read-auto-save :host github :repo "chillaranand/real-auto-save")
-  :init
-  (add-hook 'prog-mode-hook 'real-auto-save-mode)
-  :config
-  (setq real-auto-save-interval 3))
+;; (use-package real-auto-save
+;;   :straight (read-auto-save :host github :repo "chillaranand/real-auto-save")
+;;   :init
+;;   (add-hook 'prog-mode-hook 'real-auto-save-mode)
+;;   :config
+;;   (setq real-auto-save-interval 3))
 
 (setq-default cursor-type 'bar)
 
