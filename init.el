@@ -31,7 +31,7 @@
   (exec-path-from-shell-initialize)
   (mac-switch-meta)
   )
-
+(setq make-backup-files nil)
 (require 'my-tab)
 (require 'my-appearance)
 (require 'my-edit-settings)
